@@ -128,9 +128,7 @@ function App() {
 						<div className="hero-cta" id="waitlist">
 							<WaitlistForm
 								id="waitlist-form"
-								endpoint={
-									import.meta.env.DEV ? undefined : viteEndpoint
-								}
+								endpoint={viteEndpoint}
 							/>
 						</div>
 					</div>
