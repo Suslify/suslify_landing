@@ -126,10 +126,7 @@ function App() {
 						</p>
 
 						<div className="hero-cta" id="waitlist">
-							<WaitlistForm
-								id="waitlist-form"
-								endpoint={viteEndpoint}
-							/>
+							<WaitlistForm id="waitlist-form" endpoint={viteEndpoint} />
 						</div>
 					</div>
 				</header>
