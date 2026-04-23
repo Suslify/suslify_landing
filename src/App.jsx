@@ -363,14 +363,14 @@ function App() {
 								<article className="learn-card">
 									<h3 className="learn-title">Contact</h3>
 									<p className="learn-desc">
-										Connect with me on LinkedIn.
+										Contact us at suslifysupport@gmail.com
 									</p>
 									<a
 										className="btn btn-primary"
-										href="https://www.linkedin.com/in/sana-udoekong/"
+										href="mailto:suslifysupport@gmail.com"
 										target="_blank"
 										rel="noreferrer">
-										LinkedIn
+										Email us
 									</a>
 								</article>
 								<article className="learn-card">
