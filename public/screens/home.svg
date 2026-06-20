@@ -1,81 +1,97 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1600" viewBox="0 0 900 1600">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#f2faf7"/>
-      <stop offset="1" stop-color="#ffffff"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#10b981"/>
-      <stop offset="1" stop-color="#34d399"/>
-    </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0f172a" flood-opacity="0.12"/>
-    </filter>
-  </defs>
-
-  <!-- Phone frame -->
-  <rect x="90" y="40" width="720" height="1520" rx="84" fill="#0b1220"/>
-  <rect x="115" y="70" width="670" height="1460" rx="72" fill="url(#bg)"/>
-  <rect x="320" y="92" width="260" height="56" rx="28" fill="#0b1220" opacity="0.92"/>
-
-  <!-- Header -->
-  <circle cx="175" cy="210" r="40" fill="#e5e7eb"/>
-  <text x="245" y="210" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-size="44" font-weight="800" fill="#0b1220">Welcome!</text>
-  <text x="245" y="258" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-size="26" font-weight="700" fill="#5b667a">Home</text>
-  <circle cx="720" cy="225" r="18" fill="#5b667a" opacity="0.35"/>
-
-  <!-- Search -->
-  <rect x="145" y="320" width="520" height="92" rx="22" fill="#ffffff" stroke="#10b981" stroke-width="4"/>
-  <circle cx="185" cy="366" r="16" fill="#10b981" opacity="0.9"/>
-  <rect x="218" y="350" width="220" height="12" rx="6" fill="#cbd5e1"/>
-  <rect x="218" y="372" width="150" height="12" rx="6" fill="#e2e8f0"/>
-  <rect x="690" y="316" width="96" height="96" rx="26" fill="url(#accent)" filter="url(#shadow)"/>
-  <rect x="715" y="348" width="46" height="10" rx="5" fill="#ffffff" opacity="0.92"/>
-  <rect x="715" y="372" width="30" height="10" rx="5" fill="#ffffff" opacity="0.92"/>
-
-  <!-- Categories row -->
-  <text x="145" y="510" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-size="30" font-weight="800" fill="#0b1220">Categories</text>
-  <g opacity="0.98">
-    <circle cx="210" cy="600" r="58" fill="#10b981"/>
-    <circle cx="360" cy="600" r="58" fill="#10b981" opacity="0.92"/>
-    <circle cx="510" cy="600" r="58" fill="#10b981" opacity="0.86"/>
-    <circle cx="660" cy="600" r="58" fill="#10b981" opacity="0.80"/>
-  </g>
-  <g fill="#5b667a" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-size="22" font-weight="700">
-    <text x="176" y="700">Health</text>
-    <text x="322" y="700">Toiletries</text>
-    <text x="480" y="700">Clothing</text>
-    <text x="628" y="700">Children</text>
-  </g>
-
-  <!-- Coming soon card -->
-  <rect x="145" y="770" width="640" height="260" rx="28" fill="#ffffff" filter="url(#shadow)"/>
-  <rect x="165" y="790" width="600" height="220" rx="22" fill="#f2faf7"/>
-  <text x="450" y="915" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-size="34" font-weight="800" fill="#94a3b8">Coming soon…</text>
-
-  <!-- Donations list -->
-  <text x="145" y="1120" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-size="30" font-weight="800" fill="#0b1220">Donations</text>
-  <text x="785" y="1120" text-anchor="end" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-size="26" font-weight="800" fill="#10b981">See all</text>
-
-  <rect x="145" y="1170" width="305" height="320" rx="26" fill="#ffffff" filter="url(#shadow)"/>
-  <rect x="165" y="1190" width="265" height="220" rx="22" fill="#f8fafc"/>
-  <rect x="165" y="1426" width="160" height="16" rx="8" fill="#cbd5e1"/>
-  <rect x="165" y="1456" width="120" height="12" rx="6" fill="#e2e8f0"/>
-
-  <rect x="480" y="1170" width="305" height="320" rx="26" fill="#ffffff" filter="url(#shadow)"/>
-  <rect x="500" y="1190" width="265" height="220" rx="22" fill="#f8fafc"/>
-  <rect x="500" y="1426" width="160" height="16" rx="8" fill="#cbd5e1"/>
-  <rect x="500" y="1456" width="120" height="12" rx="6" fill="#e2e8f0"/>
-
+<svg viewBox="0 0 390 780" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,BlinkMacSystemFont,system-ui,sans-serif">
+  <rect width="390" height="780" fill="white"/>
+  <!-- Status bar -->
+  <text x="20" y="22" font-size="12" font-weight="600" fill="#111827">10:35</text>
+  <!-- Greeting -->
+  <circle cx="42" cy="68" r="22" fill="#3DBE8B"/>
+  <text x="42" y="74" font-size="12" font-weight="700" fill="white" text-anchor="middle">SU</text>
+  <text x="76" y="60" font-size="12" fill="#9CA3AF">Good evening,</text>
+  <text x="76" y="80" font-size="18" font-weight="700" fill="#111827">Sana</text>
+  <circle cx="354" cy="68" r="20" fill="#F3F4F6"/>
+  <path d="M354 60 C350.7 60 348 62.7 348 66 L348 70.5 C346.8 71.7 346 75 346 75 L362 75 C362 75 361.2 71.7 360 70.5 L360 66 C360 62.7 357.3 60 354 60Z M352 75 C352 76.7 352.9 78 354 78 C355.1 78 356 76.7 356 75Z" fill="#6B7280"/>
+  <!-- Search bar -->
+  <rect x="20" y="104" width="350" height="44" rx="22" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1.5"/>
+  <circle cx="44" cy="126" r="7" stroke="#9CA3AF" stroke-width="1.5" fill="none"/>
+  <line x1="49" y1="131" x2="53" y2="135" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="62" y="131" font-size="13" fill="#9CA3AF">Search donations &amp; requests...</text>
+  <!-- Green action card -->
+  <rect x="20" y="164" width="172" height="132" rx="16" fill="#3DBE8B"/>
+  <rect x="32" y="176" width="38" height="38" rx="10" fill="rgba(255,255,255,0.22)"/>
+  <rect x="39" y="184" width="24" height="16" rx="2" fill="white" opacity="0.9"/>
+  <rect x="39" y="180" width="24" height="6" rx="3" fill="white" opacity="0.7"/>
+  <line x1="51" y1="180" x2="51" y2="200" stroke="#3DBE8B" stroke-width="1.5"/>
+  <text x="32" y="228" font-size="14" font-weight="700" fill="white">Share Unused</text>
+  <text x="32" y="246" font-size="14" font-weight="700" fill="white">Things</text>
+  <text x="32" y="265" font-size="11" fill="rgba(255,255,255,0.88)">Donate items you no</text>
+  <text x="32" y="280" font-size="11" fill="rgba(255,255,255,0.88)">longer need</text>
+  <!-- Orange action card -->
+  <rect x="200" y="164" width="170" height="132" rx="16" fill="#F59E0B"/>
+  <rect x="212" y="176" width="38" height="38" rx="10" fill="rgba(255,255,255,0.22)"/>
+  <path d="M224 185 L224 200 M228 182 L228 200 M232 182 L232 200 M236 184 L236 200 M224 200 L236 200" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="212" y="228" font-size="14" font-weight="700" fill="white">Request What</text>
+  <text x="212" y="246" font-size="14" font-weight="700" fill="white">You Need</text>
+  <text x="212" y="265" font-size="11" fill="rgba(255,255,255,0.88)">Post a request for</text>
+  <text x="212" y="280" font-size="11" fill="rgba(255,255,255,0.88)">items (orgs only)</text>
+  <!-- Category chips -->
+  <rect x="20" y="312" width="44" height="30" rx="15" fill="#3DBE8B"/>
+  <text x="42" y="332" font-size="13" font-weight="600" fill="white" text-anchor="middle">All</text>
+  <rect x="72" y="312" width="96" height="30" rx="15" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="120" y="332" font-size="12" fill="#374151" text-anchor="middle">Art &amp; Crafts</text>
+  <rect x="176" y="312" width="92" height="30" rx="15" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="222" y="332" font-size="12" fill="#374151" text-anchor="middle">Automotive</text>
+  <rect x="276" y="312" width="90" height="30" rx="15" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="321" y="332" font-size="12" fill="#374151" text-anchor="middle">Baby &amp; Kids</text>
+  <!-- Section heading -->
+  <text x="20" y="364" font-size="16" font-weight="700" fill="#111827">Available now</text>
+  <!-- Item card 1 -->
+  <rect x="20" y="376" width="168" height="182" rx="14" fill="white" stroke="#F3F4F6" stroke-width="1.5"/>
+  <rect x="20" y="376" width="168" height="118" rx="14" fill="#F0EEF9"/>
+  <rect x="20" y="462" width="168" height="32" fill="#F0EEF9"/>
+  <rect x="58" y="394" width="15" height="15" rx="1" fill="#7EC850"/><rect x="73" y="394" width="15" height="15" rx="1" fill="#90EE90"/>
+  <rect x="88" y="394" width="15" height="15" rx="1" fill="#4CAF50"/><rect x="103" y="394" width="15" height="15" rx="1" fill="#3DBE8B"/>
+  <rect x="58" y="409" width="15" height="15" rx="1" fill="#8B4513"/><rect x="73" y="409" width="15" height="15" rx="1" fill="#A0522D"/>
+  <rect x="88" y="409" width="15" height="15" rx="1" fill="#8B4513"/><rect x="103" y="409" width="15" height="15" rx="1" fill="#6B3410"/>
+  <rect x="58" y="424" width="15" height="12" rx="1" fill="#9C27B0"/><rect x="73" y="424" width="15" height="12" rx="1" fill="#FFEB3B"/>
+  <rect x="88" y="424" width="15" height="12" rx="1" fill="#9C27B0"/><rect x="103" y="424" width="15" height="12" rx="1" fill="#3F51B5"/>
+  <text x="32" y="496" font-size="14" font-weight="700" fill="#111827">Toy Robot</text>
+  <text x="32" y="513" font-size="11" fill="#9CA3AF">📍 Sana Udoekong</text>
+  <circle cx="169" cy="507" r="14" fill="#F0FDF9" stroke="#D1FAE5" stroke-width="1"/>
+  <path d="M163 507 C163 504.5 164.5 503 166 503 C167 503 168 503.8 169 505 C170 503.8 171 503 172 503 C173.5 503 175 504.5 175 507 C175 510 169 514 169 514 C169 514 163 510 163 507Z" fill="none" stroke="#3DBE8B" stroke-width="1.5"/>
+  <!-- Item card 2 -->
+  <rect x="200" y="376" width="170" height="182" rx="14" fill="white" stroke="#F3F4F6" stroke-width="1.5"/>
+  <rect x="200" y="376" width="170" height="118" rx="14" fill="#E8F7F1"/>
+  <rect x="200" y="462" width="170" height="32" fill="#E8F7F1"/>
+  <rect x="260" y="406" width="36" height="32" rx="4" fill="none" stroke="#3DBE8B" stroke-width="1.5" opacity="0.4"/>
+  <line x1="260" y1="416" x2="296" y2="416" stroke="#3DBE8B" stroke-width="1.5" opacity="0.4"/>
+  <text x="278" y="452" font-size="10" fill="#3DBE8B" text-anchor="middle" opacity="0.5">No image</text>
+  <text x="212" y="496" font-size="14" font-weight="700" fill="#111827">Adidas Campuses</text>
+  <text x="212" y="513" font-size="11" fill="#9CA3AF">📍 Santa Banana</text>
+  <!-- FAB -->
+  <circle cx="352" cy="636" r="26" fill="#3DBE8B"/>
+  <line x1="352" y1="624" x2="352" y2="648" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="340" y1="636" x2="364" y2="636" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
   <!-- Bottom nav -->
-  <rect x="115" y="1452" width="670" height="78" rx="28" fill="#ffffff" stroke="#e2e8f0"/>
-  <g fill="#10b981" opacity="0.9">
-    <rect x="175" y="1476" width="34" height="34" rx="8"/>
-  </g>
-  <g fill="#94a3b8" opacity="0.9">
-    <rect x="315" y="1476" width="34" height="34" rx="8"/>
-    <rect x="455" y="1476" width="34" height="34" rx="8"/>
-    <rect x="595" y="1476" width="34" height="34" rx="8"/>
-    <rect x="705" y="1476" width="34" height="34" rx="8"/>
-  </g>
+  <rect x="0" y="700" width="390" height="80" fill="white"/>
+  <line x1="0" y1="700" x2="390" y2="700" stroke="#F3F4F6" stroke-width="1"/>
+  <!-- Home active -->
+  <path d="M22 734 L39 720 L56 734" stroke="#3DBE8B" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M26 732 L26 750 L52 750 L52 732" stroke="#3DBE8B" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+  <rect x="33" y="739" width="12" height="11" rx="1" fill="none" stroke="#3DBE8B" stroke-width="1.5"/>
+  <text x="39" y="767" font-size="10" fill="#3DBE8B" font-weight="700" text-anchor="middle">Home</text>
+  <!-- Requests -->
+  <rect x="107" y="722" width="20" height="24" rx="3" fill="none" stroke="#9CA3AF" stroke-width="1.5"/>
+  <line x1="111" y1="730" x2="123" y2="730" stroke="#9CA3AF" stroke-width="1"/><line x1="111" y1="736" x2="123" y2="736" stroke="#9CA3AF" stroke-width="1"/><line x1="111" y1="742" x2="119" y2="742" stroke="#9CA3AF" stroke-width="1"/>
+  <text x="117" y="767" font-size="10" fill="#9CA3AF" text-anchor="middle">Requests</text>
+  <!-- Messages -->
+  <path d="M183 720 Q183 718 185 718 L211 718 Q213 718 213 720 L213 734 Q213 736 211 736 L198 736 L192 742 L192 736 L185 736 Q183 736 183 734 Z" stroke="#9CA3AF" stroke-width="1.5" fill="none"/>
+  <text x="197" y="767" font-size="10" fill="#9CA3AF" text-anchor="middle">Messages</text>
+  <!-- Feed -->
+  <line x1="267" y1="722" x2="289" y2="722" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"/>
+  <line x1="267" y1="730" x2="289" y2="730" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"/>
+  <line x1="267" y1="738" x2="289" y2="738" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"/>
+  <text x="278" y="767" font-size="10" fill="#9CA3AF" text-anchor="middle">Feed</text>
+  <!-- Profile -->
+  <circle cx="351" cy="728" r="7" fill="none" stroke="#9CA3AF" stroke-width="1.5"/>
+  <path d="M339 746 Q339 738 351 738 Q363 738 363 746" stroke="#9CA3AF" stroke-width="1.5" fill="none"/>
+  <text x="351" y="767" font-size="10" fill="#9CA3AF" text-anchor="middle">Profile</text>
 </svg>

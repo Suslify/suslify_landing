@@ -1,0 +1,82 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  canonical?: string;
+}
+
+const {
+  title = 'Suslify | Donate Items. Connect with Charities. Track Your Impact.',
+  description = 'Suslify connects donors with charities. Post items to donate, request what you need, message donors directly, and track every donation from listing to pickup. Free for everyone.',
+  ogImage = 'https://suslify.netlify.app/og-image.png',
+  canonical = Astro.url.href,
+} = Astro.props;
+
+const site = 'https://suslify.netlify.app';
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Primary SEO -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="donate items, charity app, item donation, donate goods, charitable giving, donate to charity near me, nonprofit donation tracker, free charity app" />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Suslify" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="Suslify" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Suslify",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "iOS, Android",
+      "description": "Suslify connects donors with charities. Post items to donate, request what you need, coordinate pickup through in-app messaging, and track every donation from start to finish.",
+      "url": site,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Suslify",
+        "url": site,
+        "contactPoint": { "@type": "ContactPoint", "email": "suslifysupport@gmail.com", "contactType": "customer support" }
+      },
+      "featureList": [
+        "Post item donations with photos and details",
+        "Request specific items from donors",
+        "In-app messaging to coordinate pickup",
+        "Real-time donation notifications",
+        "Full donation history and tracking"
+      ]
+    })} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-white text-slate-900 antialiased font-sans">
+    <slot />
+  </body>
+</html>
