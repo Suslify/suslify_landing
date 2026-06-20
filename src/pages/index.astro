@@ -451,8 +451,10 @@ const steps = [
         if (errorMsg) errorMsg.classList.add('hidden');
 
         try {
-          const url = ENDPOINT + '?email=' + encodeURIComponent(email) + '&name=' + encodeURIComponent(name) + '&reason=' + encodeURIComponent(reason);
-          await fetch(url, { method: 'GET', mode: 'no-cors' });
+          await fetch(ENDPOINT, {
+            method: 'POST',
+            body: JSON.stringify({ email, name, reason }),
+          });
         } catch {
           // expected — no-cors opaque response
         }
