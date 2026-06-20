@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="For Charities | Suslify | Free Item Donation Platform for Nonprofits"
+  description="Suslify is free for charities and nonprofits. Post item requests, receive donations from nearby donors, coordinate pickup through in-app messaging, and track everything received."
+>
+  <Header activePage="For charities" />
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-brand-900 pt-20 pb-16 md:pt-28 md:pb-24 text-white">
+    <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+      <div class="absolute -top-24 right-0 w-[600px] h-[600px] rounded-full bg-brand-600/20 blur-3xl"></div>
+      <div class="absolute bottom-0 -left-24 w-[400px] h-[400px] rounded-full bg-brand-800/40 blur-3xl"></div>
+    </div>
+    <div class="relative max-w-6xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-4">For charities &amp; nonprofits</p>
+        <h1 class="text-5xl sm:text-6xl font-black tracking-tight mb-6 leading-tight">
+          Get the items<br />
+          <span class="text-brand-400">your charity needs.</span>
+        </h1>
+        <p class="text-brand-100/80 text-lg leading-relaxed mb-8 max-w-lg">
+          Post item requests, receive donations from donors nearby, and manage
+          everything in one place, completely free for registered charities and
+          nonprofits.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/#beta"
+             class="inline-flex bg-brand-500 hover:bg-brand-400 text-white font-bold px-7 py-3.5 rounded-full text-base transition-all shadow-lg shadow-brand-500/30 hover:-translate-y-0.5">
+            Sign up for beta. It's free
+          </a>
+          <a href="mailto:suslifysupport@gmail.com"
+             class="inline-flex border border-white/20 hover:border-white/40 text-white/80 hover:text-white font-bold px-7 py-3.5 rounded-full text-base transition-all">
+            Talk to us
+          </a>
+        </div>
+      </div>
+      <div class="flex justify-center lg:justify-end">
+        <div class="relative w-60 sm:w-72">
+          <div class="absolute inset-0 scale-110 rounded-[3rem] bg-brand-500/30 blur-2xl"></div>
+          <div class="relative bg-slate-900 rounded-[3rem] p-2.5 shadow-2xl ring-1 ring-white/10">
+            <div class="absolute top-5 left-1/2 -translate-x-1/2 w-20 h-5 bg-slate-900 rounded-full z-10"></div>
+            <div class="bg-brand-950/70 rounded-[2.4rem] overflow-hidden min-h-[420px] flex items-center justify-center">
+              <img src="/screens/requests.svg" alt="Suslify charity request board" class="w-full h-auto" loading="eager"
+                onerror="this.parentElement.innerHTML='<div class=\'w-full h-[420px] flex items-center justify-center text-brand-400 font-bold text-sm\'>Request board</div>'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What charities get -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 mb-4">What your charity gets</h2>
+        <p class="text-slate-500 text-lg max-w-xl mx-auto">Free tools built for the needs of real nonprofits.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {[
+          {
+            icon: '📋',
+            title: 'Organization profile',
+            desc: 'A public page for your charity where donors can browse your active requests and learn about your mission.',
+          },
+          {
+            icon: '📦',
+            title: 'Item request board',
+            desc: 'Post a list of items your charity needs right now. Donors nearby see your requests and can match items to them.',
+          },
+          {
+            icon: '💬',
+            title: 'Direct messaging',
+            desc: 'Communicate with donors directly inside the app to coordinate pickups without exchanging personal contact info.',
+          },
+          {
+            icon: '🔔',
+            title: 'Instant notifications',
+            desc: 'Get notified the moment a donor matches one of your requests or sends you a message.',
+          },
+          {
+            icon: '📊',
+            title: 'Donation history',
+            desc: 'A full log of every item received: what was donated, when, and by whom. Simple record-keeping built in.',
+          },
+          {
+            icon: '💚',
+            title: 'Always free',
+            desc: 'Suslify is free for charities and nonprofits. No subscriptions, no listing fees, no commissions.',
+          },
+        ].map(({ icon, title, desc }) => (
+          <div class="bg-white border border-slate-100 rounded-2xl p-6 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all">
+            <div class="w-11 h-11 bg-brand-50 rounded-xl flex items-center justify-center mb-4 text-xl">{icon}</div>
+            <h3 class="font-bold text-slate-900 mb-2">{title}</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">{desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works for charities -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-5">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 mb-4">Getting started for charities</h2>
+        <p class="text-slate-500 text-lg">Up and running in minutes.</p>
+      </div>
+      <ol class="space-y-5">
+        {[
+          { n: '1', title: 'Register your charity', desc: 'Create a free account and set up your organization\'s profile. Add your mission, location, and what types of items you typically need.' },
+          { n: '2', title: 'Post item requests', desc: 'List the items your charity needs: furniture, clothing, kitchen supplies, anything. Add as many requests as you need with quantities and conditions.' },
+          { n: '3', title: 'Donors get matched', desc: 'Donors in your area with matching items get notified. You can also browse available donations and reach out directly.' },
+          { n: '4', title: 'Coordinate pickup in-app', desc: 'Message donors directly to arrange pickup or drop-off. No phone numbers shared, all communication stays in the app.' },
+          { n: '5', title: 'Track what you receive', desc: 'Every confirmed donation logs to your history. Know exactly what came in, when, and from whom.' },
+        ].map(({ n, title, desc }, i, arr) => (
+          <li class="flex gap-5 relative">
+            {i < arr.length - 1 && <div class="absolute left-5 top-12 bottom-0 w-px bg-brand-100"></div>}
+            <div class="w-10 h-10 rounded-full bg-brand-500 text-white font-black text-sm flex items-center justify-center shrink-0 shadow-md shadow-brand-500/30 z-10">{n}</div>
+            <div class="pb-6">
+              <h3 class="font-bold text-slate-900 mb-1">{title}</h3>
+              <p class="text-sm text-slate-500 leading-relaxed">{desc}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="bg-gradient-to-br from-brand-900 to-brand-700 rounded-3xl p-10 text-white text-center shadow-2xl">
+        <h2 class="text-3xl font-black tracking-tight mb-3">Register your charity and join the beta today</h2>
+        <p class="text-white/70 mb-7 max-w-md mx-auto">
+          It's free, takes minutes, and puts you in front of donors in your community.
+        </p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a href="/#beta" class="inline-flex bg-brand-500 hover:bg-brand-400 text-white font-bold px-7 py-3.5 rounded-full text-base hover:-translate-y-0.5 transition-all shadow-lg">
+            Join the Beta. It's Free
+          </a>
+          <a href="mailto:suslifysupport@gmail.com" class="inline-flex border border-white/20 hover:border-white/40 text-white/80 hover:text-white font-bold px-7 py-3.5 rounded-full text-base transition-all">
+            Contact us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>

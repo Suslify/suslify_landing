@@ -1,0 +1,565 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const features = [
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>`,
+    title: 'Post donations or request items',
+    desc: 'Create a listing with photos, condition, and quantity. Donors and charities both post and your listing goes live in seconds.',
+    points: ['Add photos, condition, and quantity', 'Set your location and category', 'Request specific items your charity needs', 'Edit or close listings any time'],
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>`,
+    title: 'Browse and match items',
+    desc: 'Search active donations and open requests nearby. Find what you need or match your item to someone who needs it.',
+    points: ['Filter by category, condition, and distance', 'See charity and individual requests in real time', 'Offer your item directly to someone who has requested it', 'Claim a listed donation or fulfill an open request'],
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`,
+    title: 'In-app messaging',
+    desc: 'Coordinate pickup and drop-off details directly in the app. No sharing phone numbers or switching to another app.',
+    points: ['Message donors or recipients instantly', 'All handoff details in one thread', 'Get notified the moment you get a reply'],
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>`,
+    title: 'Real-time notifications',
+    desc: 'Stay informed the moment something happens: a match, a new message, or a status update on your donation.',
+    points: ['Instant alerts for messages and matches', 'Pickup confirmations and status changes', 'Charity news and urgent need alerts'],
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>`,
+    title: 'Full donation tracking',
+    desc: 'Follow every donation from listing to confirmed pickup. Your complete history is always one tap away.',
+    points: ['Clear status at every stage', 'Organized donation and request history', 'Confirmation when items are received'],
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>`,
+    title: 'Community feed',
+    desc: 'Follow announcements, events, and fundraisers from charities you care about. All in one scrollable feed.',
+    points: ['Filter by announcements, events, and news', 'Like, comment, and share posts from charities', 'Stay informed about urgent needs and drives'],
+  },
+];
+
+const steps = [
+  {
+    n: '1',
+    title: 'Create your account',
+    desc: 'Sign up in under a minute. Set your location and whether you\'re a donor, a charity, or both.',
+  },
+  {
+    n: '2',
+    title: 'Post or browse',
+    desc: 'Add an item to donate with photos and a description, or search active requests from charities and individuals nearby.',
+  },
+  {
+    n: '3',
+    title: 'Match and message',
+    desc: 'Browse open requests from charities and individuals and offer your item directly to someone who needs it. Or claim a listed donation for yourself. Message in-app to arrange pickup.',
+  },
+  {
+    n: '4',
+    title: 'Confirm and track',
+    desc: 'Mark the handoff complete. Both sides get a confirmation notification and the donation logs to your history automatically.',
+  },
+];
+---
+
+<BaseLayout>
+  <Header />
+
+  <!-- ── HERO ── -->
+  <section class="relative overflow-hidden bg-brand-900 pt-20 pb-12 md:pt-28 md:pb-20" id="top">
+    <!-- background glow -->
+    <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+      <div class="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-brand-600/20 blur-3xl"></div>
+      <div class="absolute top-1/2 -left-48 w-[400px] h-[400px] rounded-full bg-brand-800/40 blur-3xl"></div>
+    </div>
+
+    <div class="relative max-w-6xl mx-auto px-5">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <!-- Copy -->
+        <div>
+          <div class="inline-flex items-center gap-2 bg-brand-500/20 border border-brand-500/30 text-brand-300 text-xs font-semibold px-3.5 py-1.5 rounded-full mb-6 uppercase tracking-wide">
+            <span class="w-1.5 h-1.5 bg-brand-400 rounded-full animate-pulse"></span>
+            Beta launch. Sign up for early access
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.06] text-white mb-6">
+            Give smarter.<br />
+            <span class="text-brand-400">Waste less.</span>
+          </h1>
+
+          <p class="text-lg text-brand-100/70 leading-relaxed max-w-lg mb-8">
+            Suslify connects donors with charities. Post an item, request what
+            you need, message donors directly, and track every donation. All in
+            one free app.
+          </p>
+
+          <div class="flex flex-wrap gap-3 mb-10">
+            <a
+              href="#beta"
+              class="bg-brand-500 hover:bg-brand-400 text-white font-semibold px-7 py-3.5 rounded-full transition-all shadow-lg shadow-brand-500/30 hover:-translate-y-0.5 active:translate-y-0 text-base"
+            >
+              Sign Up for Beta. It's Free
+            </a>
+            <a
+              href="#how-it-works"
+              class="border border-white/20 hover:border-white/40 text-white/80 hover:text-white font-semibold px-7 py-3.5 rounded-full transition-all text-base"
+            >
+              See How It Works
+            </a>
+          </div>
+
+          <!-- Trust signals -->
+          <div class="flex flex-wrap gap-5">
+            {[
+              'Free for donors & charities',
+              'In-app messaging',
+              'Real-time notifications',
+            ].map((label) => (
+              <span class="flex items-center gap-1.5 text-sm text-brand-200/60 font-medium">
+                <svg class="w-4 h-4 text-brand-400 shrink-0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="8" r="8" fill="currentColor" fill-opacity=".15"/>
+                  <path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                {label}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <!-- Phone mockup -->
+        <div class="relative flex justify-center lg:justify-end">
+          <div class="relative">
+            <!-- glow behind phone -->
+            <div class="absolute inset-0 scale-110 rounded-[3rem] bg-brand-400/30 blur-3xl"></div>
+            <!-- phone frame -->
+            <div class="relative w-64 sm:w-72 bg-slate-900 rounded-[3rem] p-2.5 shadow-2xl ring-1 ring-white/10 phone-float">
+              <div class="absolute top-5 left-1/2 -translate-x-1/2 w-24 h-6 bg-slate-900 rounded-full z-10 ring-1 ring-white/5"></div>
+              <div class="bg-brand-50 rounded-[2.4rem] overflow-hidden min-h-[460px] flex items-center justify-center">
+                <img
+                  src="/screens/home.svg"
+                  alt="Suslify home feed showing donation listings"
+                  class="w-full h-auto"
+                  loading="eager"
+                  onerror="this.parentElement.innerHTML='<div class=\'w-full h-[460px] flex items-center justify-center text-brand-400 font-bold text-sm\'>App preview</div>'"
+                />
+              </div>
+            </div>
+            <!-- floating badge -->
+            <div class="badge-float-1 absolute -right-4 top-20 bg-white rounded-2xl shadow-lg px-4 py-3 border border-slate-100 text-sm font-semibold text-slate-800 flex items-center gap-2">
+              <span class="text-xl">📦</span> New donation posted
+            </div>
+            <div class="badge-float-2 absolute -left-6 bottom-24 bg-white rounded-2xl shadow-lg px-4 py-3 border border-slate-100 text-sm font-semibold text-slate-800 flex items-center gap-2">
+              <span class="text-xl">✅</span> Pickup confirmed!
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── APP SCREENS STRIP ── -->
+  <section class="bg-brand-50 py-16" aria-label="App preview">
+    <div class="max-w-6xl mx-auto px-5">
+      <p class="text-center text-xs font-bold uppercase tracking-widest text-brand-700 mb-8">A look inside the app</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        {[
+          { src: '/screens/home.svg',           alt: 'Suslify home feed showing available donations nearby', label: 'Browse donations' },
+          { src: '/screens/request-detail.svg', alt: 'Request details screen with Offer an Item button', label: 'Offer to requesters' },
+          { src: '/screens/cart.svg',           alt: 'Community feed with charity announcements and events', label: 'Community feed' },
+        ].map(({ src, alt, label }, i) => (
+          <div class={`rounded-2xl overflow-hidden bg-white border border-brand-100 shadow-card ${i === 1 ? '-translate-y-3 shadow-card-hover' : ''}`}>
+            <div class="bg-brand-50/60 p-4">
+              <img
+                src={src}
+                alt={alt}
+                class="w-full h-auto rounded-xl"
+                loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+              />
+              <div class="hidden w-full h-48 items-center justify-center text-brand-400 font-semibold text-sm rounded-xl bg-white">{label}</div>
+            </div>
+            <p class="text-center text-xs font-bold text-slate-500 pb-4">{label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURES ── -->
+  <section id="features" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center mb-14">
+        <p class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-3">Features</p>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 mb-4">
+          Everything you need<br class="hidden sm:block" /> to give effectively
+        </h2>
+        <p class="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
+          From listing to pickup confirmation, Suslify handles the whole
+          donation journey so nothing falls through the cracks.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {features.map(({ icon, title, desc, points }) => (
+          <article class="bg-white border border-slate-100 rounded-2xl p-6 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-200 flex flex-col">
+            <div class="w-11 h-11 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-4 shrink-0" set:html={icon} />
+            <h3 class="font-bold text-slate-900 mb-2 text-base leading-snug">{title}</h3>
+            <p class="text-sm text-slate-500 leading-relaxed mb-4">{desc}</p>
+            <ul class="mt-auto space-y-2">
+              {points.map((p) => (
+                <li class="flex items-start gap-2 text-sm text-slate-500">
+                  <svg class="w-4 h-4 text-brand-500 shrink-0 mt-0.5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.5 8l3 3 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  {p}
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ── -->
+  <section id="how-it-works" class="py-24 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center mb-14">
+        <p class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-3">How it works</p>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 mb-4">Simple by design</h2>
+        <p class="text-lg text-slate-500 max-w-xl mx-auto leading-relaxed">
+          Four steps from sign-up to confirmed donation. No complicated setup.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <!-- Steps -->
+        <ol class="space-y-0">
+          {steps.map(({ n, title, desc }, i) => (
+            <li class="flex gap-5 relative">
+              <!-- connector line -->
+              {i < steps.length - 1 && (
+                <div class="absolute left-5 top-12 bottom-0 w-px bg-brand-100" aria-hidden="true"></div>
+              )}
+              <!-- number -->
+              <div class="w-10 h-10 rounded-full bg-brand-500 text-white font-black text-sm flex items-center justify-center shrink-0 shadow-md shadow-brand-500/30 z-10">
+                {n}
+              </div>
+              <div class={`pb-8 ${i === steps.length - 1 ? '' : ''}`}>
+                <h3 class="font-bold text-slate-900 text-base mb-1.5">{title}</h3>
+                <p class="text-sm text-slate-500 leading-relaxed">{desc}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+
+        <!-- Screenshot -->
+        <div class="relative flex justify-center lg:justify-end">
+          <div class="relative w-60 sm:w-72">
+            <div class="absolute inset-0 scale-105 rounded-[3rem] bg-brand-300/20 blur-2xl"></div>
+            <div class="relative bg-slate-900 rounded-[3rem] p-2.5 shadow-2xl ring-1 ring-white/10">
+              <div class="absolute top-5 left-1/2 -translate-x-1/2 w-20 h-5 bg-slate-900 rounded-full z-10"></div>
+              <div class="bg-brand-50 rounded-[2.4rem] overflow-hidden min-h-[420px] flex items-center justify-center">
+                <img
+                  src="/screens/request-detail.svg"
+                  alt="Request details screen showing Offer an Item button"
+                  class="w-full h-auto"
+                  loading="lazy"
+                  onerror="this.parentElement.innerHTML='<div class=\'w-full h-[420px] flex items-center justify-center text-brand-400 font-bold text-sm\'>Request detail screen</div>'"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOR CHARITIES ── -->
+  <section id="for-charities-strip" class="py-24 bg-brand-900">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+
+        <!-- Screenshot left -->
+        <div class="relative flex justify-center order-2 lg:order-1">
+          <div class="relative w-60 sm:w-72">
+            <div class="absolute inset-0 scale-105 rounded-[3rem] bg-brand-500/30 blur-2xl"></div>
+            <div class="relative bg-slate-900 rounded-[3rem] p-2.5 shadow-2xl ring-1 ring-white/10">
+              <div class="absolute top-5 left-1/2 -translate-x-1/2 w-20 h-5 bg-slate-900 rounded-full z-10"></div>
+              <div class="bg-brand-950/60 rounded-[2.4rem] overflow-hidden min-h-[420px] flex items-center justify-center">
+                <img
+                  src="/screens/cart.svg"
+                  alt="Community feed showing charity announcements and events"
+                  class="w-full h-auto"
+                  loading="lazy"
+                  onerror="this.parentElement.innerHTML='<div class=\'w-full h-[420px] flex items-center justify-center text-brand-400 font-bold text-sm\'>Request board</div>'"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copy right -->
+        <div class="order-1 lg:order-2">
+          <p class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-4">For charities &amp; nonprofits</p>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-5 leading-tight">
+            Built for<br />organizations too
+          </h2>
+          <p class="text-brand-100/70 text-lg leading-relaxed mb-8">
+            Suslify isn't just for individual donors. Charities get their own
+            profile, direct messaging with donors, and a full request board.
+            All completely free.
+          </p>
+
+          <ul class="space-y-4 mb-10">
+            {[
+              'Post urgent item requests your charity needs right now',
+              'Message donors directly to coordinate large or recurring pickups',
+              'Track everything received with a full transaction history',
+              'Get notified instantly when a donor matches your request',
+            ].map((item) => (
+              <li class="flex items-start gap-3 text-brand-100/80 text-sm leading-relaxed">
+                <span class="mt-0.5 w-5 h-5 rounded-full bg-brand-500/30 text-brand-400 flex items-center justify-center shrink-0">
+                  <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3">
+                    <path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <div class="flex flex-wrap gap-3">
+            <a href="/for-charities"
+               class="bg-brand-500 hover:bg-brand-400 text-white font-bold px-6 py-3 rounded-full transition-all shadow-lg shadow-brand-500/30 text-sm">
+              Learn more for charities
+            </a>
+            <a href="#beta"
+               class="border border-white/20 hover:border-white/40 text-white/80 hover:text-white font-bold px-6 py-3 rounded-full transition-all text-sm">
+              Join the beta
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BETA SIGNUP FORM ── -->
+  <section id="beta" class="py-24 bg-white">
+    <div class="max-w-2xl mx-auto px-5">
+
+      <div class="text-center mb-10">
+        <p class="text-xs font-semibold uppercase tracking-widest text-brand-600 mb-3">Beta launch</p>
+        <h2 class="text-3xl font-bold tracking-tight text-slate-900 mb-4">
+          Be among the first to use it.
+        </h2>
+        <p class="text-slate-500 leading-relaxed max-w-md mx-auto">
+          Suslify is launching in beta. Sign up now to get early access, free
+          for donors and charities. No credit card, no commitment.
+        </p>
+      </div>
+
+      <form
+        id="beta-form"
+        class="bg-white border border-slate-100 rounded-3xl shadow-card p-8 space-y-5"
+        novalidate
+      >
+        <div>
+          <label for="beta-name" class="block text-sm font-semibold text-slate-700 mb-1.5">Full name</label>
+          <input
+            id="beta-name"
+            name="entry.2005620554"
+            type="text"
+            placeholder="Your name"
+            required
+            class="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-brand-400 transition"
+          />
+        </div>
+
+        <div>
+          <label for="beta-email" class="block text-sm font-semibold text-slate-700 mb-1.5">Email address</label>
+          <input
+            id="beta-email"
+            name="entry.1045781291"
+            type="email"
+            placeholder="you@example.com"
+            required
+            class="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-brand-400 transition"
+          />
+        </div>
+
+        <div>
+          <label for="beta-reason" class="block text-sm font-semibold text-slate-700 mb-1.5">
+            Why do you want to join? <span class="font-normal text-slate-400">(optional)</span>
+          </label>
+          <textarea
+            id="beta-reason"
+            name="entry.839337160"
+            rows="4"
+            placeholder="Are you a donor, a charity, or just curious? Tell us a little about yourself..."
+            class="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-brand-400 transition resize-none"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          id="beta-submit"
+          class="w-full bg-brand-500 hover:bg-brand-600 active:bg-brand-700 text-white font-semibold py-3.5 rounded-xl transition-all shadow-md shadow-brand-500/20 hover:-translate-y-px text-base"
+        >
+          Join the Beta. It's Free
+        </button>
+
+        <!-- Error message -->
+        <p id="beta-error" class="hidden text-center text-sm text-red-500 font-medium"></p>
+
+        <!-- Success message (hidden until submitted) -->
+        <div id="beta-success" class="hidden text-center py-4">
+          <div class="text-3xl mb-3">🎉</div>
+          <p class="font-semibold text-slate-900 mb-1">You're on the list!</p>
+          <p class="text-sm text-slate-500">We'll be in touch as soon as beta opens up. Thanks for signing up.</p>
+        </div>
+      </form>
+
+      <!-- Store badges - coming soon -->
+      <div class="mt-8 text-center">
+        <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">App coming soon on</p>
+        <div class="flex justify-center flex-wrap gap-4">
+          <div class="flex flex-col items-center gap-1.5 cursor-not-allowed">
+            <div class="flex items-center gap-3 bg-slate-100 text-slate-400 px-5 py-3 rounded-2xl opacity-50 select-none">
+              <svg class="w-6 h-6 shrink-0" viewBox="0 0 28 28" fill="none"><path d="M20.3 14.8c0-3.2 2.6-4.7 2.7-4.8-1.5-2.1-3.8-2.4-4.6-2.4-2-.2-3.8 1.2-4.8 1.2-1 0-2.5-1.2-4.2-1.1-2.1 0-4.1 1.2-5.2 3.1-2.2 3.9-.6 9.6 1.6 12.7 1.1 1.5 2.3 3.2 3.9 3.2 1.6-.1 2.2-1 4.1-1 1.9 0 2.5 1 4.2 1 1.7 0 2.8-1.6 3.8-3.1 1.2-1.7 1.7-3.5 1.7-3.6-.1-.1-3.2-1.3-3.2-4.2zm-3-8.1c.9-1.1 1.5-2.6 1.3-4.1-1.3.1-2.8.9-3.7 2-.8.9-1.6 2.4-1.4 3.9 1.4.1 2.9-.7 3.8-1.8z" fill="currentColor"/></svg>
+              <span class="text-sm font-semibold">App Store</span>
+            </div>
+            <span class="text-xs text-slate-400">Coming soon</span>
+          </div>
+          <div class="flex flex-col items-center gap-1.5 cursor-not-allowed">
+            <div class="flex items-center gap-3 bg-slate-100 text-slate-400 px-5 py-3 rounded-2xl opacity-50 select-none">
+              <svg class="w-6 h-6 shrink-0" viewBox="0 0 28 28" fill="none"><path d="M4.5 3.3A1.5 1.5 0 0 0 3 4.8v18.4a1.5 1.5 0 0 0 2.3 1.3l14-9.2a1.5 1.5 0 0 0 0-2.6L5.3 3.5a1.5 1.5 0 0 0-.8-.2z" fill="currentColor"/></svg>
+              <span class="text-sm font-semibold">Google Play</span>
+            </div>
+            <span class="text-xs text-slate-400">Coming soon</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    const ENDPOINT = 'https://script.google.com/macros/s/AKfycbyGkqqkb3584Prj9HjAmV9e4sIa1G0q66PIYwTROF_qlNyd9AS1k8597X8Ns_pVrVJV/exec';
+
+    const form = document.getElementById('beta-form') as HTMLFormElement | null;
+    const success = document.getElementById('beta-success');
+    const submitBtn = document.getElementById('beta-submit') as HTMLButtonElement | null;
+    const errorMsg = document.getElementById('beta-error');
+
+    if (form && success && submitBtn) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const name = (document.getElementById('beta-name') as HTMLInputElement).value.trim();
+        const email = (document.getElementById('beta-email') as HTMLInputElement).value.trim();
+        const reason = (document.getElementById('beta-reason') as HTMLTextAreaElement).value.trim();
+        if (!name || !email) return;
+
+        submitBtn.textContent = 'Sending…';
+        submitBtn.disabled = true;
+        if (errorMsg) errorMsg.classList.add('hidden');
+
+        try {
+          const url = ENDPOINT + '?email=' + encodeURIComponent(email) + '&name=' + encodeURIComponent(name) + '&reason=' + encodeURIComponent(reason);
+          await fetch(url, { method: 'GET', mode: 'no-cors' });
+        } catch {
+          // expected — no-cors opaque response
+        }
+        form.querySelectorAll('input, textarea, button').forEach((el) => (el as HTMLElement).classList.add('hidden'));
+        success!.classList.remove('hidden');
+      });
+    }
+  </script>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="py-24 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center mb-12">
+        <p class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-3">Get in touch</p>
+        <h2 class="text-3xl font-bold tracking-tight text-slate-900 mb-4">We'd love to hear from you</h2>
+        <p class="text-lg text-slate-500 max-w-xl mx-auto leading-relaxed">
+          Questions, partnerships, or feedback. Reach out directly.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
+        <div class="bg-white border border-slate-100 rounded-2xl p-7 shadow-card">
+          <div class="w-11 h-11 bg-brand-50 rounded-xl flex items-center justify-center mb-4 text-xl">✉️</div>
+          <h3 class="font-bold text-slate-900 mb-2">Contact us</h3>
+          <p class="text-sm text-slate-500 leading-relaxed mb-5">
+            For partnerships, press, or support. Email us directly.
+          </p>
+          <a href="mailto:suslifysupport@gmail.com"
+             class="inline-flex bg-brand-500 hover:bg-brand-600 text-white font-bold text-sm px-5 py-2.5 rounded-full transition-all shadow-md shadow-brand-500/20">
+            suslifysupport@gmail.com
+          </a>
+        </div>
+
+        <div class="bg-white border border-slate-100 rounded-2xl p-7 shadow-card">
+          <div class="w-11 h-11 bg-brand-50 rounded-xl flex items-center justify-center mb-4 text-xl">💬</div>
+          <h3 class="font-bold text-slate-900 mb-2">Share feedback</h3>
+          <p class="text-sm text-slate-500 leading-relaxed mb-5">
+            Tell us what you'd like to see. Every response is read personally.
+          </p>
+          <a href="https://forms.gle/zkx2MMfZv3YBTBbZA" target="_blank" rel="noreferrer"
+             class="inline-flex border border-slate-200 hover:border-brand-300 text-slate-700 font-bold text-sm px-5 py-2.5 rounded-full transition-all bg-white hover:shadow-md">
+            Open feedback form
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FINAL CTA ── -->
+  <section class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="relative overflow-hidden bg-gradient-to-br from-brand-500 to-brand-700 rounded-3xl px-8 py-12 text-white text-center shadow-glow-lg">
+        <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+          <div class="absolute -top-10 -right-10 w-64 h-64 rounded-full bg-white/5"></div>
+          <div class="absolute -bottom-10 -left-10 w-80 h-80 rounded-full bg-white/5"></div>
+        </div>
+        <div class="relative">
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mb-3">Give smarter. Waste less.</h2>
+          <p class="text-white/80 text-lg mb-8 max-w-lg mx-auto leading-relaxed">
+            Join donors and charities in the Suslify beta and start creating real
+            impact, for free.
+          </p>
+          <a href="#beta"
+             class="inline-flex bg-white text-brand-700 font-bold px-8 py-4 rounded-full text-base transition-all hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0">
+            Sign Up for Beta — It's Free
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-14px); }
+  }
+  @keyframes floatBadge {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-8px); }
+  }
+  .phone-float { animation: float 5s ease-in-out infinite; }
+  .badge-float-1 { animation: floatBadge 5s ease-in-out infinite; animation-delay: -1.5s; }
+  .badge-float-2 { animation: floatBadge 5s ease-in-out infinite; animation-delay: -3s; }
+</style>

@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="For Donors | Suslify | Donate Items to Charities Near You"
+  description="Donate items you no longer need to charities near you. Post your item, match it to an active request, and coordinate pickup. All in the Suslify app for free."
+>
+  <Header activePage="For donors" />
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-white pt-20 pb-16 md:pt-28 md:pb-24">
+    <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+      <div class="absolute -top-24 -right-24 w-[500px] h-[500px] rounded-full bg-brand-100/50 blur-3xl"></div>
+    </div>
+    <div class="relative max-w-6xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-4">For donors</p>
+        <h1 class="text-5xl sm:text-6xl font-black tracking-tight text-slate-900 mb-6 leading-tight">
+          Your unused items<br />
+          <span class="text-brand-500">can change lives.</span>
+        </h1>
+        <p class="text-lg text-slate-500 leading-relaxed mb-8 max-w-lg">
+          Got a sofa, clothes, kitchen gear, or anything else collecting dust?
+          Suslify makes it simple to post your item and get it to a charity or
+          person who actually needs it, right in your neighbourhood.
+        </p>
+        <a href="/#beta"
+           class="inline-flex bg-brand-500 hover:bg-brand-600 text-white font-bold px-7 py-3.5 rounded-full text-base transition-all shadow-lg shadow-brand-500/25 hover:-translate-y-0.5">
+          Sign up for beta. It's free
+        </a>
+      </div>
+      <div class="flex justify-center lg:justify-end">
+        <div class="relative w-60 sm:w-72">
+          <div class="absolute inset-0 scale-110 rounded-[3rem] bg-brand-300/20 blur-2xl"></div>
+          <div class="relative bg-slate-900 rounded-[3rem] p-2.5 shadow-2xl ring-1 ring-white/10">
+            <div class="absolute top-5 left-1/2 -translate-x-1/2 w-20 h-5 bg-slate-900 rounded-full z-10"></div>
+            <div class="bg-brand-50 rounded-[2.4rem] overflow-hidden min-h-[420px] flex items-center justify-center">
+              <img src="/screens/item-detail.svg" alt="Suslify item detail screen" class="w-full h-auto" loading="eager"
+                onerror="this.parentElement.innerHTML='<div class=\'w-full h-[420px] flex items-center justify-center text-brand-400 font-bold text-sm\'>Item detail screen</div>'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How donating works -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-5">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 mb-4">How donating works</h2>
+        <p class="text-slate-500 text-lg max-w-xl mx-auto">Simple, fast, and fully tracked.</p>
+      </div>
+      <ol class="space-y-5">
+        {[
+          {
+            n: '1', title: 'Create a free account',
+            desc: 'Sign up in under a minute. Set your location and Suslify will show you charities and people nearby.',
+          },
+          {
+            n: '2', title: 'Post your item',
+            desc: 'Add photos, a short description, condition, and quantity. Choose a category and your listing is live instantly.',
+          },
+          {
+            n: '3', title: 'Get matched or offer directly',
+            desc: 'Charities and individuals with active requests get notified when you post. You can also browse open requests and offer your item directly to someone who needs it. You\'re always in control of who receives it.',
+          },
+          {
+            n: '4', title: 'Message and arrange pickup',
+            desc: 'Use in-app messaging to sort out where and when. No sharing your personal number.',
+          },
+          {
+            n: '5', title: 'Confirm and you\'re done',
+            desc: 'Mark the donation complete. It logs to your history and you\'ll receive a confirmation. Your impact, tracked.',
+          },
+        ].map(({ n, title, desc }, i, arr) => (
+          <li class="flex gap-5 relative">
+            {i < arr.length - 1 && <div class="absolute left-5 top-12 bottom-0 w-px bg-brand-100"></div>}
+            <div class="w-10 h-10 rounded-full bg-brand-500 text-white font-black text-sm flex items-center justify-center shrink-0 shadow-md shadow-brand-500/30 z-10">{n}</div>
+            <div class="pb-6">
+              <h3 class="font-bold text-slate-900 mb-1">{title}</h3>
+              <p class="text-sm text-slate-500 leading-relaxed">{desc}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- What you can donate -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 mb-4">What can you donate?</h2>
+        <p class="text-slate-500 text-lg max-w-xl mx-auto">Almost anything in good condition.</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        {[
+          ['🛋️', 'Furniture'],
+          ['👕', 'Clothing'],
+          ['📚', 'Books'],
+          ['🍳', 'Kitchen items'],
+          ['🧸', 'Toys & games'],
+          ['💻', 'Electronics'],
+          ['🚲', 'Sports & leisure'],
+          ['🧴', 'Toiletries'],
+        ].map(([icon, label]) => (
+          <div class="flex flex-col items-center justify-center gap-2 bg-brand-50 rounded-2xl py-6 px-4 border border-brand-100">
+            <span class="text-2xl">{icon}</span>
+            <span class="text-sm font-bold text-slate-700">{label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="bg-gradient-to-br from-brand-500 to-brand-700 rounded-3xl p-10 text-white text-center shadow-glow">
+        <h2 class="text-3xl font-black tracking-tight mb-3">Ready to donate something today?</h2>
+        <p class="text-white/80 mb-7 max-w-md mx-auto">Create a free account and post your first item in minutes.</p>
+        <a href="/#beta" class="inline-flex bg-white text-brand-700 font-bold px-7 py-3.5 rounded-full text-base hover:shadow-xl hover:-translate-y-0.5 transition-all">
+          Join the Beta. It's Free
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,172 @@
+<svg viewBox="0 0 390 780" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,BlinkMacSystemFont,'SF Pro Text',system-ui,sans-serif">
+  <defs>
+    <!-- Reusable tag/pricetag icon (category chip) -->
+    <symbol id="tag" viewBox="0 0 13 15">
+      <path d="M1.5 2.5 C1.5 1.4 2.4 0.5 3.5 0.5 H9.5 C10.6 0.5 11.5 1.4 11.5 2.5 V9.5 C11.5 10.2 11.2 10.8 10.7 11.3 L7 14.5 L3.3 11.3 C2.8 10.8 1.5 10.2 1.5 9.5 Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+      <circle cx="9" cy="3" r="1.3" fill="none" stroke="currentColor" stroke-width="1.1"/>
+    </symbol>
+    <!-- Building/org icon -->
+    <symbol id="bldg" viewBox="0 0 15 15">
+      <rect x="0.5" y="6" width="5" height="8.5" rx="0.5" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <rect x="6.5" y="0.5" width="8" height="14" rx="0.5" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <rect x="8" y="2.5" width="2" height="2" rx="0.3" fill="currentColor" opacity="0.5"/>
+      <rect x="11.5" y="2.5" width="2" height="2" rx="0.3" fill="currentColor" opacity="0.5"/>
+      <rect x="8" y="6.5" width="2" height="2" rx="0.3" fill="currentColor" opacity="0.5"/>
+      <rect x="11.5" y="6.5" width="2" height="2" rx="0.3" fill="currentColor" opacity="0.5"/>
+      <rect x="2" y="8" width="2" height="2" rx="0.3" fill="currentColor" opacity="0.5"/>
+      <rect x="8" y="10" width="5.5" height="4.5" rx="0.3" fill="currentColor" opacity="0.15"/>
+    </symbol>
+  </defs>
+
+  <!-- Screen bg -->
+  <rect width="390" height="780" fill="white"/>
+
+  <!-- ── STATUS BAR ── -->
+  <text x="20" y="19" font-size="12" font-weight="600" fill="#111827">10:38</text>
+  <!-- wifi + signal icons (simplified) -->
+  <rect x="340" y="8" width="3" height="7" rx="1" fill="#374151"/>
+  <rect x="345" y="6" width="3" height="9" rx="1" fill="#374151"/>
+  <rect x="350" y="4" width="3" height="11" rx="1" fill="#374151"/>
+  <rect x="355" y="2" width="3" height="13" rx="1" fill="#374151"/>
+  <rect x="361" y="6" width="16" height="9" rx="2.5" fill="none" stroke="#374151" stroke-width="1.2"/>
+  <rect x="363" y="8" width="10" height="5" rx="1.5" fill="#374151"/>
+  <rect x="377" y="8.5" width="2" height="4" rx="1" fill="#374151" opacity="0.4"/>
+
+  <!-- ── HEADER ── -->
+  <!-- Back arrow -->
+  <path d="M26 47 L16 39 L26 31" stroke="#111827" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Title -->
+  <text x="195" y="44" font-size="17" font-weight="700" fill="#111827" text-anchor="middle">Item Details</text>
+  <!-- Three-dot menu -->
+  <circle cx="362" cy="34" r="2.4" fill="#374151"/>
+  <circle cx="362" cy="42" r="2.4" fill="#374151"/>
+  <circle cx="362" cy="50" r="2.4" fill="#374151"/>
+
+  <!-- ── PARTIAL SCROLL INDICATOR: image area cut off by scroll ── -->
+  <rect x="0" y="60" width="390" height="44" fill="#F5F5F5"/>
+  <!-- Cut-off item name text, partially visible as if scrolled up -->
+  <text x="20" y="95" font-size="22" font-weight="700" fill="#D1D5DB" opacity="0.7">Alpha Blocks</text>
+  <!-- Scroll fade gradient -->
+  <rect x="0" y="60" width="390" height="44" fill="url(#scroll-fade)"/>
+  <defs>
+    <linearGradient id="scroll-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="white" stop-opacity="0"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ── ORG ROW ── -->
+  <use href="#bldg" x="20" y="112" width="15" height="15" color="#3DBE8B"/>
+  <text x="40" y="124" font-size="14" font-weight="600" fill="#3DBE8B">Santa Banana</text>
+
+  <!-- ── CATEGORY CHIPS ── -->
+  <!-- Row 1 -->
+  <!-- Chip 1: Books & Stationery -->
+  <rect x="20" y="140" width="164" height="32" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1.4"/>
+  <use href="#tag" x="32" y="150" width="11" height="13" color="#9CA3AF"/>
+  <text x="50" y="161" font-size="12.5" fill="#374151">Books &amp; Stationery</text>
+  <!-- Chip 2: Baby & Kids -->
+  <rect x="190" y="140" width="108" height="32" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1.4"/>
+  <use href="#tag" x="202" y="150" width="11" height="13" color="#9CA3AF"/>
+  <text x="220" y="161" font-size="12.5" fill="#374151">Baby &amp; Kids</text>
+  <!-- Row 2 -->
+  <!-- Chip 3: Education -->
+  <rect x="20" y="180" width="98" height="32" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1.4"/>
+  <use href="#tag" x="32" y="190" width="11" height="13" color="#9CA3AF"/>
+  <text x="50" y="201" font-size="12.5" fill="#374151">Education</text>
+
+  <!-- ── DIVIDER ── -->
+  <line x1="20" y1="224" x2="370" y2="224" stroke="#F3F4F6" stroke-width="1"/>
+
+  <!-- ── DESCRIPTION ── -->
+  <text x="20" y="247" font-size="12.5" font-weight="500" fill="#9CA3AF">Description</text>
+  <text x="20" y="270" font-size="14.5" fill="#374151">kids textbook</text>
+
+  <!-- ── DIVIDER ── -->
+  <line x1="20" y1="288" x2="370" y2="288" stroke="#F3F4F6" stroke-width="1"/>
+
+  <!-- ── DETAILS SECTION ── -->
+  <text x="20" y="311" font-size="12.5" font-weight="500" fill="#9CA3AF">Details</text>
+
+  <!-- Row: Condition -->
+  <text x="20" y="340" font-size="14" fill="#9CA3AF">Condition</text>
+  <text x="145" y="340" font-size="14" font-weight="700" fill="#111827">New</text>
+  <line x1="20" y1="352" x2="370" y2="352" stroke="#F9FAFB" stroke-width="1"/>
+
+  <!-- Row: Quantity -->
+  <text x="20" y="373" font-size="14" fill="#9CA3AF">Quantity</text>
+  <text x="145" y="373" font-size="14" font-weight="700" fill="#111827">1</text>
+  <line x1="20" y1="385" x2="370" y2="385" stroke="#F9FAFB" stroke-width="1"/>
+
+  <!-- Row: Delivery -->
+  <text x="20" y="406" font-size="14" fill="#9CA3AF">Delivery</text>
+  <text x="145" y="406" font-size="14" font-weight="700" fill="#111827">Pickup</text>
+  <line x1="20" y1="418" x2="370" y2="418" stroke="#F9FAFB" stroke-width="1"/>
+
+  <!-- Row: Listed -->
+  <text x="20" y="439" font-size="14" fill="#9CA3AF">Listed</text>
+  <text x="145" y="439" font-size="14" font-weight="700" fill="#111827">Jun 15, 2026</text>
+  <line x1="20" y1="451" x2="370" y2="451" stroke="#F9FAFB" stroke-width="1"/>
+
+  <!-- Row: Updated -->
+  <text x="20" y="472" font-size="14" fill="#9CA3AF">Updated</text>
+  <text x="145" y="472" font-size="14" font-weight="700" fill="#111827">Jun 16, 2026</text>
+
+  <!-- ── REQUEST ITEM BUTTON ── -->
+  <rect x="20" y="510" width="350" height="54" rx="27" fill="#3DBE8B"/>
+  <!-- Arrow-in-circle icon -->
+  <circle cx="60" cy="537" r="14" fill="rgba(255,255,255,0.22)"/>
+  <path d="M54 537 L66 537" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M61 531 L67 537 L61 543" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="205" y="542" font-size="16" font-weight="700" fill="white" text-anchor="middle">Request Item</text>
+
+  <!-- ── SECONDARY BUTTONS ── -->
+  <!-- Message (green outline, left) -->
+  <rect x="20" y="576" width="168" height="48" rx="24" fill="white" stroke="#3DBE8B" stroke-width="1.5"/>
+  <!-- Chat bubble icon -->
+  <path d="M56 593 Q56 591 58 591 L80 591 Q82 591 82 593 L82 603 Q82 605 80 605 L70 605 L65 610 L65 605 L58 605 Q56 605 56 603 Z" stroke="#3DBE8B" stroke-width="1.4" fill="none" stroke-linejoin="round"/>
+  <text x="116" y="604" font-size="14" font-weight="600" fill="#3DBE8B" text-anchor="middle">Message</text>
+
+  <!-- Link to Request (grey outline, right) -->
+  <rect x="202" y="576" width="168" height="48" rx="24" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <!-- Link icon (two ovals connected) -->
+  <path d="M238 604 C236 602 236 599 238 597 L241 594 C243 592 246 592 248 594 L249 595" stroke="#6B7280" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M245 601 C247 603 250 603 252 601 L255 598 C257 596 257 593 255 591 L254 590" stroke="#6B7280" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <line x1="243" y1="601" x2="250" y2="594" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="292" y="604" font-size="13" font-weight="600" fill="#374151" text-anchor="middle">Link to Request</text>
+
+  <!-- ── BOTTOM NAV ── -->
+  <rect x="0" y="700" width="390" height="80" fill="white"/>
+  <line x1="0" y1="700" x2="390" y2="700" stroke="#F3F4F6" stroke-width="1"/>
+
+  <!-- Home (ACTIVE) -->
+  <path d="M24 734 L39 720 L54 734" stroke="#3DBE8B" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M28 732 L28 749 L50 749 L50 732" stroke="#3DBE8B" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+  <rect x="34" y="739" width="10" height="10" rx="1" fill="none" stroke="#3DBE8B" stroke-width="1.8"/>
+  <text x="39" y="766" font-size="10" font-weight="700" fill="#3DBE8B" text-anchor="middle">Home</text>
+
+  <!-- Requests -->
+  <rect x="108" y="722" width="18" height="22" rx="2.5" fill="none" stroke="#9CA3AF" stroke-width="1.5"/>
+  <line x1="112" y1="729" x2="122" y2="729" stroke="#9CA3AF" stroke-width="1.1"/>
+  <line x1="112" y1="734" x2="122" y2="734" stroke="#9CA3AF" stroke-width="1.1"/>
+  <line x1="112" y1="739" x2="119" y2="739" stroke="#9CA3AF" stroke-width="1.1"/>
+  <text x="117" y="766" font-size="10" fill="#9CA3AF" text-anchor="middle">Requests</text>
+
+  <!-- Messages -->
+  <path d="M184 721 Q184 719 186 719 L210 719 Q212 719 212 721 L212 733 Q212 735 210 735 L199 735 L194 741 L194 735 L186 735 Q184 735 184 733 Z" stroke="#9CA3AF" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+  <text x="198" y="766" font-size="10" fill="#9CA3AF" text-anchor="middle">Messages</text>
+
+  <!-- Feed -->
+  <line x1="268" y1="722" x2="288" y2="722" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"/>
+  <line x1="268" y1="729" x2="288" y2="729" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"/>
+  <line x1="268" y1="736" x2="288" y2="736" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"/>
+  <text x="278" y="766" font-size="10" fill="#9CA3AF" text-anchor="middle">Feed</text>
+
+  <!-- Profile -->
+  <circle cx="351" cy="727" r="7" fill="none" stroke="#9CA3AF" stroke-width="1.5"/>
+  <path d="M340 745 Q340 737 351 737 Q362 737 362 745" stroke="#9CA3AF" stroke-width="1.5" fill="none"/>
+  <text x="351" y="766" font-size="10" fill="#9CA3AF" text-anchor="middle">Profile</text>
+
+  <!-- Home indicator bar -->
+  <rect x="148" y="770" width="94" height="4" rx="2" fill="#111827" opacity="0.15"/>
+</svg>
