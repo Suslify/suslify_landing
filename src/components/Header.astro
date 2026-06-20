@@ -1,0 +1,57 @@
+---
+export interface Props {
+  activePage?: string;
+}
+const { activePage = '' } = Astro.props;
+
+const nav = [
+  { href: '/#features',      label: 'Features' },
+  { href: '/#how-it-works',  label: 'How it works' },
+  { href: '/for-donors',     label: 'For donors' },
+  { href: '/for-charities',  label: 'For charities' },
+];
+---
+
+<header class="sticky top-0 z-50 bg-brand-900/95 backdrop-blur-md border-b border-white/10">
+  <div class="max-w-6xl mx-auto px-5 flex items-center justify-between h-16 gap-6">
+
+    <!-- Logo + nav all on the left -->
+    <div class="flex items-center gap-7 min-w-0">
+      <!-- Logo / Home link -->
+      <a href="/" aria-label="Suslify home" class="flex items-center gap-2.5 shrink-0">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 shrink-0">
+          <rect width="200" height="200" rx="48" fill="#3DBE8B"/>
+          <path d="M40 172 A44 44 0 0 1 84 128"   stroke="white" stroke-width="12" fill="none" stroke-linecap="round"/>
+          <path d="M40 172 A80 80 0 0 1 120 92"   stroke="white" stroke-width="12" fill="none" stroke-linecap="round" opacity="0.6"/>
+          <path d="M40 172 A116 116 0 0 1 156 56" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" opacity="0.28"/>
+          <circle cx="40" cy="172" r="14" fill="white"/>
+        </svg>
+        <span class="font-medium text-base text-white/90">Home</span>
+      </a>
+
+      <!-- Desktop nav — immediately after logo -->
+      <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
+        {nav.map(({ href, label }) => (
+          <a
+            href={href}
+            class={`text-sm font-medium transition-colors whitespace-nowrap ${
+              activePage === label
+                ? 'text-brand-400'
+                : 'text-white/60 hover:text-white'
+            }`}
+          >
+            {label}
+          </a>
+        ))}
+      </nav>
+    </div>
+
+    <!-- CTA -->
+    <a
+      href="/#beta"
+      class="shrink-0 bg-brand-500 hover:bg-brand-400 text-white font-semibold text-sm px-5 py-2.5 rounded-full transition-all shadow-md shadow-brand-500/30 hover:-translate-y-px active:translate-y-0"
+    >
+      Join the Beta
+    </a>
+  </div>
+</header>

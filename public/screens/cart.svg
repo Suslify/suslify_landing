@@ -1,79 +1,95 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1600" viewBox="0 0 900 1600">
+<svg viewBox="0 0 390 780" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,BlinkMacSystemFont,system-ui,sans-serif">
+  <rect width="390" height="780" fill="white"/>
+  <!-- Status bar -->
+  <text x="20" y="22" font-size="12" font-weight="600" fill="#111827">10:36</text>
+  <!-- Header -->
+  <text x="20" y="62" font-size="22" font-weight="700" fill="#111827">Community Feed</text>
+  <circle cx="354" cy="52" r="20" fill="#F3F4F6"/>
+  <circle cx="354" cy="52" r="7" stroke="#6B7280" stroke-width="1.5" fill="none"/>
+  <line x1="359" y1="57" x2="363" y2="61" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Category chips -->
+  <rect x="20" y="80" width="44" height="30" rx="15" fill="#3DBE8B"/>
+  <text x="42" y="100" font-size="13" font-weight="600" fill="white" text-anchor="middle">All</text>
+  <rect x="72" y="80" width="110" height="30" rx="15" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="127" y="100" font-size="12" fill="#374151" text-anchor="middle">Announcement</text>
+  <rect x="190" y="80" width="64" height="30" rx="15" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="222" y="100" font-size="12" fill="#374151" text-anchor="middle">Event</text>
+  <rect x="262" y="80" width="86" height="30" rx="15" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="305" y="100" font-size="12" fill="#374151" text-anchor="middle">Fundraiser</text>
+
+  <!-- Feed post card 1 -->
+  <rect x="20" y="128" width="350" height="300" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <!-- Announcement badge -->
+  <rect x="32" y="142" width="116" height="24" rx="12" fill="#EFF6FF"/>
+  <text x="88" y="158" font-size="11" font-weight="600" fill="#3B82F6" text-anchor="middle">📢 Announcement</text>
+  <text x="340" y="158" font-size="11" fill="#9CA3AF" text-anchor="end">3d ago</text>
+  <!-- Post title + org -->
+  <text x="32" y="186" font-size="16" font-weight="700" fill="#111827">Suslify Beta Launch</text>
+  <rect x="32" y="196" width="14" height="14" rx="2" fill="none" stroke="#6B7280" stroke-width="1.2"/>
+  <line x1="32" y1="200" x2="46" y2="200" stroke="#6B7280" stroke-width="1"/><line x1="36" y1="196" x2="36" y2="210" stroke="#6B7280" stroke-width="1"/>
+  <text x="52" y="208" font-size="13" fill="#6B7280">Gateway 360</text>
+  <text x="32" y="228" font-size="13" fill="#374151">We're going live — sign up for early access</text>
+  <text x="32" y="244" font-size="13" fill="#374151">and be among the first to use Suslify.</text>
+  <!-- Post image placeholder (green gradient) -->
+  <rect x="32" y="258" width="326" height="128" rx="10" fill="#E8F7F1"/>
+  <rect x="32" y="258" width="326" height="128" rx="10" fill="url(#feedGrad)"/>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#f2faf7"/>
+    <linearGradient id="feedGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3DBE8B" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#3DBE8B" stop-opacity="0.08"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#10b981"/>
-      <stop offset="1" stop-color="#34d399"/>
-    </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0f172a" flood-opacity="0.12"/>
-    </filter>
   </defs>
+  <text x="195" y="316" font-size="28" text-anchor="middle">🚀</text>
+  <text x="195" y="346" font-size="13" fill="#3DBE8B" text-anchor="middle" font-weight="600">Beta is here — give smarter.</text>
+  <!-- Like / Comment / Share row -->
+  <line x1="32" y1="400" x2="358" y2="400" stroke="#F3F4F6" stroke-width="1"/>
+  <text x="65" y="418" font-size="13" fill="#6B7280" text-anchor="middle">🤍  Like</text>
+  <text x="195" y="418" font-size="13" fill="#6B7280" text-anchor="middle">💬  Comment</text>
+  <text x="320" y="418" font-size="13" fill="#6B7280" text-anchor="middle">↗  Share</text>
 
-  <!-- Phone frame -->
-  <rect x="90" y="40" width="720" height="1520" rx="84" fill="#0b1220"/>
-  <rect x="115" y="70" width="670" height="1460" rx="72" fill="url(#bg)"/>
-  <rect x="320" y="92" width="260" height="56" rx="28" fill="#0b1220" opacity="0.92"/>
+  <!-- Feed post card 2 -->
+  <rect x="20" y="446" width="350" height="160" rx="16" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <rect x="32" y="460" width="68" height="24" rx="12" fill="#FEF3C7"/>
+  <text x="66" y="476" font-size="11" font-weight="600" fill="#D97706" text-anchor="middle">📅 Event</text>
+  <text x="340" y="476" font-size="11" fill="#9CA3AF" text-anchor="end">1w ago</text>
+  <text x="32" y="502" font-size="16" font-weight="700" fill="#111827">Winter Donation Drive</text>
+  <rect x="32" y="512" width="14" height="14" rx="2" fill="none" stroke="#6B7280" stroke-width="1.2"/>
+  <line x1="32" y1="516" x2="46" y2="516" stroke="#6B7280" stroke-width="1"/><line x1="36" y1="512" x2="36" y2="526" stroke="#6B7280" stroke-width="1"/>
+  <text x="52" y="524" font-size="13" fill="#6B7280">Community Hub</text>
+  <text x="32" y="546" font-size="13" fill="#374151">Collecting warm clothing for families in</text>
+  <text x="32" y="562" font-size="13" fill="#374151">need — donate before Dec 20.</text>
+  <line x1="32" y1="580" x2="358" y2="580" stroke="#F3F4F6" stroke-width="1"/>
+  <text x="65" y="598" font-size="13" fill="#6B7280" text-anchor="middle">🤍  Like</text>
+  <text x="195" y="598" font-size="13" fill="#6B7280" text-anchor="middle">💬  Comment</text>
+  <text x="320" y="598" font-size="13" fill="#6B7280" text-anchor="middle">↗  Share</text>
 
-  <!-- Top bar -->
-  <text x="170" y="220" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-size="44" font-weight="900" fill="#0b1220">Cart</text>
-  <circle cx="725" cy="210" r="22" fill="url(#accent)" filter="url(#shadow)"/>
-
-  <!-- Cart list cards -->
-  <g>
-    <rect x="145" y="290" width="640" height="180" rx="24" fill="#ffffff" filter="url(#shadow)"/>
-    <rect x="165" y="310" width="140" height="140" rx="18" fill="#f8fafc"/>
-    <rect x="325" y="330" width="300" height="16" rx="8" fill="#cbd5e1"/>
-    <rect x="325" y="360" width="240" height="12" rx="6" fill="#e2e8f0"/>
-    <rect x="325" y="392" width="180" height="12" rx="6" fill="#e2e8f0"/>
-    <rect x="675" y="336" width="90" height="34" rx="17" fill="#eaf4f0" stroke="#10b981" stroke-width="3"/>
-    <rect x="682" y="344" width="46" height="10" rx="5" fill="#10b981" opacity="0.9"/>
-  </g>
-
-  <g>
-    <rect x="145" y="500" width="640" height="180" rx="24" fill="#ffffff" filter="url(#shadow)"/>
-    <rect x="165" y="520" width="140" height="140" rx="18" fill="#f8fafc"/>
-    <rect x="325" y="540" width="320" height="16" rx="8" fill="#cbd5e1"/>
-    <rect x="325" y="570" width="220" height="12" rx="6" fill="#e2e8f0"/>
-    <rect x="325" y="602" width="200" height="12" rx="6" fill="#e2e8f0"/>
-    <rect x="675" y="546" width="90" height="34" rx="17" fill="#eaf4f0" stroke="#10b981" stroke-width="3"/>
-    <rect x="682" y="554" width="46" height="10" rx="5" fill="#10b981" opacity="0.9"/>
-  </g>
-
-  <g>
-    <rect x="145" y="710" width="640" height="180" rx="24" fill="#ffffff" filter="url(#shadow)"/>
-    <rect x="165" y="730" width="140" height="140" rx="18" fill="#f8fafc"/>
-    <rect x="325" y="750" width="280" height="16" rx="8" fill="#cbd5e1"/>
-    <rect x="325" y="780" width="250" height="12" rx="6" fill="#e2e8f0"/>
-    <rect x="325" y="812" width="210" height="12" rx="6" fill="#e2e8f0"/>
-    <rect x="675" y="756" width="90" height="34" rx="17" fill="#eaf4f0" stroke="#10b981" stroke-width="3"/>
-    <rect x="682" y="764" width="46" height="10" rx="5" fill="#10b981" opacity="0.9"/>
-  </g>
-
-  <!-- Summary -->
-  <rect x="145" y="950" width="640" height="240" rx="28" fill="#ffffff" filter="url(#shadow)"/>
-  <text x="180" y="1010" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-size="28" font-weight="900" fill="#0b1220">Summary</text>
-  <rect x="180" y="1040" width="380" height="12" rx="6" fill="#e2e8f0"/>
-  <rect x="180" y="1070" width="420" height="12" rx="6" fill="#e2e8f0"/>
-  <rect x="180" y="1100" width="300" height="12" rx="6" fill="#e2e8f0"/>
-
-  <rect x="180" y="1150" width="560" height="64" rx="22" fill="url(#accent)" filter="url(#shadow)"/>
-  <text x="460" y="1192" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto" font-size="26" font-weight="900" fill="#ffffff">Request pickup</text>
+  <!-- FAB -->
+  <circle cx="352" cy="652" r="26" fill="#3DBE8B"/>
+  <line x1="352" y1="640" x2="352" y2="664" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="340" y1="652" x2="364" y2="652" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
 
   <!-- Bottom nav -->
-  <rect x="115" y="1452" width="670" height="78" rx="28" fill="#ffffff" stroke="#e2e8f0"/>
-  <g fill="#94a3b8" opacity="0.9">
-    <rect x="175" y="1476" width="34" height="34" rx="8"/>
-    <rect x="315" y="1476" width="34" height="34" rx="8"/>
-  </g>
-  <g fill="#10b981" opacity="0.9">
-    <rect x="455" y="1476" width="34" height="34" rx="8"/>
-  </g>
-  <g fill="#94a3b8" opacity="0.9">
-    <rect x="595" y="1476" width="34" height="34" rx="8"/>
-    <rect x="705" y="1476" width="34" height="34" rx="8"/>
-  </g>
+  <rect x="0" y="700" width="390" height="80" fill="white"/>
+  <line x1="0" y1="700" x2="390" y2="700" stroke="#F3F4F6" stroke-width="1"/>
+  <!-- Home -->
+  <path d="M22 734 L39 720 L56 734" stroke="#9CA3AF" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M26 732 L26 750 L52 750 L52 732" stroke="#9CA3AF" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+  <rect x="33" y="739" width="12" height="11" rx="1" fill="none" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="39" y="767" font-size="10" fill="#9CA3AF" text-anchor="middle">Home</text>
+  <!-- Requests -->
+  <rect x="107" y="722" width="20" height="24" rx="3" fill="none" stroke="#9CA3AF" stroke-width="1.5"/>
+  <line x1="111" y1="730" x2="123" y2="730" stroke="#9CA3AF" stroke-width="1"/><line x1="111" y1="736" x2="123" y2="736" stroke="#9CA3AF" stroke-width="1"/><line x1="111" y1="742" x2="119" y2="742" stroke="#9CA3AF" stroke-width="1"/>
+  <text x="117" y="767" font-size="10" fill="#9CA3AF" text-anchor="middle">Requests</text>
+  <!-- Messages -->
+  <path d="M183 720 Q183 718 185 718 L211 718 Q213 718 213 720 L213 734 Q213 736 211 736 L198 736 L192 742 L192 736 L185 736 Q183 736 183 734 Z" stroke="#9CA3AF" stroke-width="1.5" fill="none"/>
+  <text x="197" y="767" font-size="10" fill="#9CA3AF" text-anchor="middle">Messages</text>
+  <!-- Feed (active) -->
+  <line x1="267" y1="722" x2="289" y2="722" stroke="#3DBE8B" stroke-width="2" stroke-linecap="round"/>
+  <line x1="267" y1="730" x2="289" y2="730" stroke="#3DBE8B" stroke-width="2" stroke-linecap="round"/>
+  <line x1="267" y1="738" x2="289" y2="738" stroke="#3DBE8B" stroke-width="2" stroke-linecap="round"/>
+  <text x="278" y="767" font-size="10" fill="#3DBE8B" font-weight="700" text-anchor="middle">Feed</text>
+  <!-- Profile -->
+  <circle cx="351" cy="728" r="7" fill="none" stroke="#9CA3AF" stroke-width="1.5"/>
+  <path d="M339 746 Q339 738 351 738 Q363 738 363 746" stroke="#9CA3AF" stroke-width="1.5" fill="none"/>
+  <text x="351" y="767" font-size="10" fill="#9CA3AF" text-anchor="middle">Profile</text>
 </svg>
