@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://suslify.netlify.app/sitemap.xml
+Sitemap: https://suslify.com/sitemap.xml
