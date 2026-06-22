@@ -4,7 +4,7 @@ A modern, responsive landing page for Suslify, built with React and Vite. This l
 
 ## 🌐 Live Demo
 
-Visit the hosted application at: [https://suslify.netlify.app/](https://suslify.netlify.app/)
+Visit the hosted application at: [https://suslify.com/](https://suslify.com/)
 
 ## 🚀 Features
 
