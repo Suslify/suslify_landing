@@ -1,0 +1,400 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const sections = [
+  { id: 'information-we-collect',   label: '1. Information We Collect' },
+  { id: 'how-we-use',               label: '2. How We Use Your Information' },
+  { id: 'legal-bases',              label: '3. Legal Bases for Processing' },
+  { id: 'how-we-disclose',          label: '4. How We Disclose Your Information' },
+  { id: 'international-transfers',  label: '5. International Data Transfers' },
+  { id: 'retention',                label: '6. Data Retention and Deletion' },
+  { id: 'your-rights',              label: '7. Your Privacy Rights' },
+  { id: 'us-disclosures',           label: '8. U.S. State Law Disclosures' },
+  { id: 'cookies',                  label: '9. Cookies and Tracking' },
+  { id: 'california',               label: '10. California Disclosure' },
+  { id: 'security',                 label: '11. Security' },
+  { id: 'contact',                  label: '12. Contact' },
+  { id: 'future',                   label: '13. Future Expansion' },
+  { id: 'children',                 label: '14. Children\'s Privacy' },
+  { id: 'changes',                  label: '15. Changes to This Policy' },
+  { id: 'contact-us',               label: '16. Contact Us' },
+];
+---
+
+<BaseLayout
+  title="Privacy Policy | Suslify"
+  description="Suslify's Privacy Policy — how we collect, use, and protect your personal information."
+>
+  <Header />
+
+  <!-- Hero -->
+  <section class="bg-white pt-20 pb-10 md:pt-28 border-b border-slate-100">
+    <div class="max-w-4xl mx-auto px-5">
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 mb-3 leading-tight">
+        Privacy Policy
+      </h1>
+      <p class="text-slate-400 text-sm">Last Updated: June 22, 2026</p>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-5 py-12 lg:py-16 flex flex-col lg:flex-row gap-12">
+
+    <!-- Table of Contents (desktop sidebar) -->
+    <aside class="hidden lg:block w-56 shrink-0">
+      <div class="sticky top-24">
+        <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Contents</p>
+        <nav class="space-y-1.5">
+          {sections.map(s => (
+            <a
+              href={`#${s.id}`}
+              class="block text-xs text-slate-500 hover:text-brand-600 transition-colors leading-snug"
+            >
+              {s.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <article class="flex-1 min-w-0">
+
+      <p class="text-slate-600 leading-relaxed mb-10 text-[1.05rem]">
+        This Privacy Policy describes how Suslify ("Suslify," "we," "us," or "our") collects, uses, discloses,
+        and protects personal information when you use our platform, including our website (suslify.com) and
+        web/mobile application (collectively, the "Platform"). This Policy applies to Donors, Nonprofits, and
+        all other visitors and users of the Platform. It is intended to comply with the CCPA/CPRA, GDPR,
+        Switzerland's FADP, and Canada's PIPEDA/Law 25, to the extent applicable.
+      </p>
+
+      <!-- Section 1 -->
+      <section id="information-we-collect" class="mb-12 scroll-mt-24">
+        <h2 class="text-xl font-bold text-slate-900 mb-6 pb-3 border-b border-slate-100">1. Information We Collect</h2>
+
+        <div class="mb-6">
+          <h3 class="font-semibold text-slate-800 mb-2">1.1 Information You Provide Directly</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-3">When you create an account or use the Platform, we may collect:</p>
+          <ul class="space-y-1.5 text-sm text-slate-600">
+            {[
+              'Name and email address',
+              'Phone number (if provided)',
+              'Bio',
+              'Physical address, used to generate approximate geographic coordinates for donation listings',
+              'Photographs you upload (e.g., of donation items, or a profile photo)',
+              'Nonprofit organization details — name, logo, causes, address, and description',
+              'Donation listing information, including item descriptions, categories, and condition',
+              'Any information you submit through support inquiries or other communications with us',
+            ].map(item => (
+              <li class="flex gap-2.5">
+                <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0"></span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-semibold text-slate-800 mb-2">1.2 Information Collected Automatically</h3>
+          <ul class="space-y-1.5 text-sm text-slate-600">
+            {[
+              'Log and usage data — IP address, browser type, and how you interact with the Platform',
+              'Device data — device identifiers, hardware model, and operating system',
+              'Approximate location data derived from your IP address through our analytics tools',
+            ].map(item => (
+              <li class="flex gap-2.5">
+                <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0"></span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-semibold text-slate-800 mb-2">1.3 Donation Listing Data</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            When you create a donation listing, we collect item description, category, photographs, and the
+            geographic coordinates (latitude/longitude) generated from your address. This location data is
+            used to match Donors with Nonprofits.
+          </p>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-semibold text-slate-800 mb-2">1.4 Camera and Photo Access</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            The Platform may request access to your device's camera and photo library to allow you to upload
+            photographs. You may decline these permissions through your device settings, though doing so may
+            limit your ability to create listings with photos.
+          </p>
+        </div>
+
+        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 text-sm text-slate-600">
+          <span class="font-semibold text-slate-800">1.5 Sensitive Information — </span>
+          We do not intentionally collect sensitive personal information such as health data, financial data,
+          biometric data, government IDs, or information revealing race, ethnicity, religion, political
+          opinions, or sexual orientation.
+        </div>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="how-we-use" class="mb-12 scroll-mt-24">
+        <h2 class="text-xl font-bold text-slate-900 mb-6 pb-3 border-b border-slate-100">2. How We Use Your Information</h2>
+        <ul class="space-y-1.5 text-sm text-slate-600">
+          {[
+            'Deliver and facilitate the Platform\'s core services',
+            'Enable communication between Donors and Nonprofits',
+            'Manage and fulfill donation listings and requests',
+            'Respond to user inquiries and provide support',
+            'Send administrative information — one-time passcodes for password reset, security notices, and policy updates',
+            'Facilitate matching based on listing details and location',
+            'Identify usage trends and improve the Platform',
+            'Protect the Platform from fraud and abuse',
+            'Request feedback to improve user experience',
+            'Verify the legitimacy of organizations registering as Nonprofits',
+          ].map(item => (
+            <li class="flex gap-2.5">
+              <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0"></span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="text-slate-500 text-sm mt-4 leading-relaxed">
+          Once Suslify begins sending product update communications, we will provide a clear opt-out mechanism
+          in accordance with applicable law, including the CAN-SPAM Act.
+        </p>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="legal-bases" class="mb-12 scroll-mt-24">
+        <h2 class="text-xl font-bold text-slate-900 mb-6 pb-3 border-b border-slate-100">3. Legal Bases for Processing <span class="text-slate-400 font-normal text-base">(EU/UK/Switzerland)</span></h2>
+        <div class="space-y-3">
+          {[
+            { title: 'Performance of a contract', body: 'To provide the Platform\'s core services to you.' },
+            { title: 'Legitimate interests', body: 'To identify usage trends, protect the Platform from fraud, request feedback, and verify nonprofit legitimacy.' },
+            { title: 'Consent', body: 'Where required, such as for certain device permissions.' },
+          ].map(({ title, body }) => (
+            <div class="flex gap-3 text-sm text-slate-600">
+              <span class="mt-0.5 text-brand-500 font-bold shrink-0">→</span>
+              <p><span class="font-semibold text-slate-800">{title} — </span>{body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="how-we-disclose" class="mb-12 scroll-mt-24">
+        <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">4. How We Disclose Your Information</h2>
+        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          We do not sell or share personal information for cross-context behavioral advertising or third parties'
+          independent marketing purposes.
+        </p>
+
+        <div class="mb-5">
+          <h3 class="font-semibold text-slate-800 mb-3">4.1 Service Providers</h3>
+          <div class="divide-y divide-slate-100 border border-slate-100 rounded-xl overflow-hidden text-sm">
+            {[
+              { name: 'Microsoft Azure', desc: 'Cloud computing, hosting, and application performance monitoring' },
+              { name: 'Google', desc: 'Google Search Console for website search performance analysis' },
+              { name: 'Netlify', desc: 'Website hosting' },
+              { name: 'Nominatim / OpenStreetMap', desc: 'Geocoding — converts addresses into approximate geographic coordinates' },
+            ].map(({ name, desc }) => (
+              <div class="flex gap-4 px-4 py-3">
+                <span class="font-semibold text-slate-800 w-44 shrink-0">{name}</span>
+                <span class="text-slate-500">{desc}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="space-y-4 text-sm text-slate-600">
+          <p><span class="font-semibold text-slate-800">4.2 Other Users — </span>
+            Certain information — your name, general location, listing details, and photographs — may be
+            visible to other users as part of the donor-nonprofit matching process.
+          </p>
+          <p><span class="font-semibold text-slate-800">4.3 Business Transfers — </span>
+            If Suslify is involved in a merger, acquisition, or sale of assets, personal information may
+            be disclosed as part of that transaction.
+          </p>
+          <p><span class="font-semibold text-slate-800">4.4 Legal Requirements — </span>
+            We may disclose information where required by law or to protect the rights, property, or safety
+            of Suslify, our users, or the public.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="international-transfers" class="mb-12 scroll-mt-24">
+        <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">5. International Data Transfers</h2>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          Our servers are located in the United States. If you access the Platform from the EU, UK, Switzerland,
+          or other regions, your information will be transferred to and processed in the United States. Where
+          required, we rely on the European Commission's Standard Contractual Clauses (SCCs) as our transfer
+          mechanism.
+        </p>
+      </section>
+
+      <!-- Section 6 -->
+      <section id="retention" class="mb-12 scroll-mt-24">
+        <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">6. Data Retention and Deletion</h2>
+        <div class="space-y-4 text-sm text-slate-600 leading-relaxed">
+          <p>
+            We retain personal information for as long as your account is active or as needed to provide
+            the Platform's services. When you delete your account through the Platform, your account is
+            deactivated and your profile is no longer visible to other users. Associated personal data is
+            marked for deletion and will be permanently purged from our systems within a reasonable period
+            thereafter, subject to the backup retention note below. Organizations you own will also be
+            deactivated and removed from public view at the same time.
+          </p>
+          <div class="p-4 bg-amber-50 rounded-xl border border-amber-100 text-amber-800">
+            <span class="font-semibold">Please note — </span>if you have active or pending donation
+            transactions at the time of your deletion request, you will be required to cancel those
+            transactions before your account or organization can be deleted. This is to protect other
+            users who are party to those transactions.
+          </div>
+          <p>
+            Residual copies of deleted data may persist temporarily in routine system backups before being
+            purged in the ordinary course of our backup retention cycle.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 7 -->
+      <section id="your-rights" class="mb-12 scroll-mt-24">
+        <h2 class="text-xl font-bold text-slate-900 mb-6 pb-3 border-b border-slate-100">7. Your Privacy Rights</h2>
+        <p class="text-slate-600 text-sm leading-relaxed mb-4">Depending on your location, you may have the right to:</p>
+        <div class="grid sm:grid-cols-2 gap-3">
+          {[
+            'Access the personal information we hold about you',
+            'Correct or update inaccurate information',
+            'Delete your personal information',
+            'Object to or restrict certain processing',
+            'Withdraw consent where processing is based on consent',
+            'Receive a portable copy of your data',
+          ].map(right => (
+            <div class="flex gap-2.5 text-sm text-slate-600 bg-slate-50 rounded-lg px-3 py-2.5">
+              <span class="text-brand-500 font-bold shrink-0">✓</span>
+              <span>{right}</span>
+            </div>
+          ))}
+        </div>
+        <p class="text-slate-500 text-sm mt-4 leading-relaxed">
+          You can exercise many of these rights directly through your account settings. For other requests,
+          contact us at <a href="mailto:suslifysupport@gmail.com" class="text-brand-600 hover:underline">suslifysupport@gmail.com</a>.
+        </p>
+      </section>
+
+      <!-- Section 8 -->
+      <section id="us-disclosures" class="mb-12 scroll-mt-24">
+        <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">8. U.S. State Law Disclosures</h2>
+        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+          In the preceding twelve (12) months, we have collected and disclosed (for business purposes, not sale)
+          the following categories of personal information:
+        </p>
+        <div class="divide-y divide-slate-100 border border-slate-100 rounded-xl overflow-hidden text-sm">
+          {[
+            'Identifiers (e.g., name, email address)',
+            'Consumer/personal property records (e.g., descriptions of donated items)',
+            'Geolocation data',
+            'Sensory data (e.g., photographs)',
+          ].map(cat => (
+            <div class="flex items-center justify-between px-4 py-3">
+              <span class="text-slate-700">{cat}</span>
+              <span class="text-xs font-medium text-brand-600 bg-brand-50 px-2 py-0.5 rounded-full">Collected & Disclosed</span>
+            </div>
+          ))}
+        </div>
+        <p class="text-slate-500 text-sm mt-3">We do not sell personal information as defined under applicable law.</p>
+      </section>
+
+      <!-- Section 9 -->
+      <section id="cookies" class="mb-12 scroll-mt-24">
+        <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">9. Cookies and Tracking Technologies</h2>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          The Platform does not currently use cookies or web beacons. We use Microsoft Azure Application
+          Insights and Google Search Console to understand Platform usage and performance; these tools may
+          collect log, device, and usage data as described in Section 1.2.
+        </p>
+      </section>
+
+      <!-- Section 10 -->
+      <section id="california" class="mb-12 scroll-mt-24">
+        <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">10. California "Shine the Light" Disclosure</h2>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          California residents may request information about our disclosure of personal information to third
+          parties for their own direct marketing purposes. We do not share personal information with third
+          parties for their own direct marketing purposes.
+        </p>
+      </section>
+
+      <!-- Section 11 -->
+      <section id="security" class="mb-12 scroll-mt-24">
+        <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">11. Security</h2>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          We have implemented technical and organizational security measures to protect personal information,
+          including encrypted data storage, secure transmission (HTTPS/SSL), and password hashing. No method
+          of transmission over the internet is 100% secure. In the event of a security incident, we will
+          notify affected individuals and relevant authorities as required by applicable law.
+        </p>
+      </section>
+
+      <!-- Section 12 -->
+      <section id="contact" class="mb-12 scroll-mt-24">
+        <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">12. Data Protection Contact</h2>
+        <div class="p-6 bg-brand-50 rounded-2xl border border-brand-100">
+          <p class="text-sm text-slate-600 mb-4">
+            For questions, concerns, or requests regarding your personal information, contact our privacy team:
+          </p>
+          <a href="mailto:suslifysupport@gmail.com"
+             class="inline-flex bg-brand-500 hover:bg-brand-600 text-white font-bold text-sm px-5 py-2.5 rounded-full transition-all shadow-md shadow-brand-500/20">
+            suslifysupport@gmail.com
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 13 -->
+      <section id="future" class="mb-12 scroll-mt-24">
+        <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">13. Future Expansion</h2>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          If Suslify expands its services to additional jurisdictions, we will update this Privacy Policy to
+          reflect any applicable local data protection requirements.
+        </p>
+      </section>
+
+      <!-- Section 14 -->
+      <section id="children" class="mb-12 scroll-mt-24">
+        <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">14. Children's Privacy</h2>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          The Platform is not directed to individuals under the age of 18. We do not knowingly collect personal
+          information from children. If we become aware that we have collected personal information from a child
+          under 18, we will take steps to delete such information.
+        </p>
+      </section>
+
+      <!-- Section 15 -->
+      <section id="changes" class="mb-12 scroll-mt-24">
+        <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">15. Changes to This Policy</h2>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          We may update this Privacy Policy from time to time. We will post the updated Policy on the Platform
+          and revise the "Last Updated" date above. Material changes will be communicated as required by
+          applicable law.
+        </p>
+      </section>
+
+      <!-- Section 16 -->
+      <section id="contact-us" class="mb-4 scroll-mt-24">
+        <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">16. Contact Us</h2>
+        <div class="p-6 bg-brand-50 rounded-2xl border border-brand-100">
+          <p class="text-sm text-slate-600 mb-4">If you have questions about this Privacy Policy, please contact us:</p>
+          <a href="mailto:suslifysupport@gmail.com"
+             class="inline-flex bg-brand-500 hover:bg-brand-600 text-white font-bold text-sm px-5 py-2.5 rounded-full transition-all shadow-md shadow-brand-500/20">
+            suslifysupport@gmail.com
+          </a>
+        </div>
+      </section>
+
+    </article>
+  </div>
+
+  <Footer />
+</BaseLayout>
