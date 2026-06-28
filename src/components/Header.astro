@@ -5,10 +5,11 @@ export interface Props {
 const { activePage = '' } = Astro.props;
 
 const nav = [
+  { href: '/about',          label: 'About' },
   { href: '/#features',      label: 'Features' },
   { href: '/#how-it-works',  label: 'How it works' },
-  { href: '/for-donors',     label: 'For donors' },
   { href: '/for-charities',  label: 'For charities' },
+  { href: '/for-donors',     label: 'For donors' },
 ];
 ---
 
