@@ -2,38 +2,11 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
----
-
-<BaseLayout
-  title="Terms and Conditions | Suslify"
-  description="Suslify's Terms and Conditions — the rules governing your use of the Suslify platform."
->
-  <Header />
-
-  <section class="bg-white pt-20 pb-10 md:pt-28 border-b border-slate-100">
-    <div class="max-w-4xl mx-auto px-5">
-      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 mb-3 leading-tight">
-        Terms and Conditions
-      </h1>
-    </div>
-  </section>
-
-  <div class="max-w-4xl mx-auto px-5 py-20 text-center">
-    <p class="text-slate-500 text-lg">Our Terms and Conditions are currently being reviewed and will be published here shortly.</p>
-    <p class="text-slate-400 text-sm mt-3">In the meantime, please contact us at <a href="mailto:hello@suslify.com" class="text-brand-600 hover:underline">hello@suslify.com</a> with any questions.</p>
-  </div>
-
-  <Footer />
-</BaseLayout>
-
-{/*
-
-COMMENTED OUT — restore by removing the coming-soon section above and uncommenting this block
 
 const sections = [
   { id: 'description',      label: '1. Description of Service' },
   { id: 'eligibility',      label: '2. Eligibility' },
-  { id: 'social-media',     label: '3. Social Media Profile Links' },
+  { id: 'social-media',     label: '3. Social Media Account Linking' },
   { id: 'platform-role',    label: '4. Platform Role; No Guarantee' },
   { id: 'prohibited',       label: '5. Prohibited Activities' },
   { id: 'user-content',     label: '6. User Content and Reviews' },
@@ -47,9 +20,27 @@ const sections = [
   { id: 'changes',          label: '14. Changes to These Terms' },
   { id: 'contact',          label: '15. Contact Us' },
 ];
+---
+
+<BaseLayout
+  title="Terms and Conditions | Suslify"
+  description="Suslify's Terms and Conditions — the rules governing your use of the Suslify platform."
+>
+  <Header />
+
+  <!-- Hero -->
+  <section class="bg-white pt-20 pb-10 md:pt-28 border-b border-slate-100">
+    <div class="max-w-4xl mx-auto px-5">
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 mb-3 leading-tight">
+        Terms and Conditions
+      </h1>
+      <p class="text-slate-400 text-sm">Last Updated: 2 July, 2026</p>
+    </div>
+  </section>
 
   <div class="max-w-4xl mx-auto px-5 py-12 lg:py-16 flex flex-col lg:flex-row gap-12">
 
+    <!-- Table of Contents (desktop sidebar) -->
     <aside class="hidden lg:block w-56 shrink-0">
       <div class="sticky top-24">
         <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Contents</p>
@@ -66,15 +57,17 @@ const sections = [
       </div>
     </aside>
 
+    <!-- Main content -->
     <article class="flex-1 min-w-0">
 
       <p class="text-slate-600 leading-relaxed mb-10 text-[1.05rem]">
         Welcome to Suslify. These Terms and Conditions ("Terms") govern your access to and use of the Suslify
-        platform, including our website (suslify.com), web application, mobile application, and any related
+        platform, including our website (suslify.com), web application, mobile application and any related
         services (collectively, the "Platform"). By creating an account, accessing, or using the Platform,
         you agree to be bound by these Terms. If you do not agree, you may not use the Platform.
       </p>
 
+      <!-- Section 1 -->
       <section id="description" class="mb-12 scroll-mt-24">
         <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">1. Description of Service</h2>
         <div class="space-y-4 text-sm text-slate-600 leading-relaxed">
@@ -85,9 +78,9 @@ const sections = [
             to donate, and Nonprofits may browse, request, and arrange to receive such items.
           </p>
           <p>
-            Suslify is currently a personal project operated by Sana Idemakpan Udoekong, an individual, and is
+            Suslify is currently a personal educational project operated by Sana Udoekong, an individual, and is
             not yet a registered business entity. References to "we," "us," or "our" in these Terms refer to
-            Sana Idemakpan Udoekong operating as Suslify.
+            Sana Udoekong operating as Suslify.
           </p>
           <div class="p-4 bg-amber-50 rounded-xl border border-amber-100 text-sm text-amber-800">
             <p class="font-semibold mb-1">Beta notice</p>
@@ -123,6 +116,7 @@ const sections = [
         </div>
       </section>
 
+      <!-- Section 2 -->
       <section id="eligibility" class="mb-12 scroll-mt-24">
         <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">2. Eligibility</h2>
         <p class="text-sm text-slate-600 leading-relaxed">
@@ -134,8 +128,9 @@ const sections = [
         </p>
       </section>
 
+      <!-- Section 3 -->
       <section id="social-media" class="mb-12 scroll-mt-24">
-        <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">3. Social Media Profile Links</h2>
+        <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">3. Social Media Account Linking</h2>
         <div class="space-y-4 text-sm text-slate-600 leading-relaxed">
           <p>
             The Platform may allow you to display links to your own social media profiles (such as Instagram,
@@ -144,7 +139,7 @@ const sections = [
             not authenticate, log in through, or exchange any data with these third-party platforms.
           </p>
           <p>
-            You are solely responsible for the accuracy of any social media links you choose to display.
+            You are solely responsible for the accuracy of any social media links you choose to display, and
             Suslify is not responsible for the content, privacy practices, or availability of any third-party
             platform you link to.
           </p>
@@ -156,6 +151,7 @@ const sections = [
         </div>
       </section>
 
+      <!-- Section 4 -->
       <section id="platform-role" class="mb-12 scroll-mt-24">
         <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">4. Platform Role; No Guarantee</h2>
         <div class="space-y-4 text-sm text-slate-600 leading-relaxed">
@@ -175,19 +171,20 @@ const sections = [
         </div>
       </section>
 
+      <!-- Section 5 -->
       <section id="prohibited" class="mb-12 scroll-mt-24">
         <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">5. Prohibited Activities</h2>
         <p class="text-sm text-slate-600 leading-relaxed mb-4">You agree not to use the Platform to:</p>
         <ul class="space-y-2">
           {[
-            'Advertise or offer to sell goods or services.',
-            'Sell or transfer your account profile to another person or entity.',
-            'Process, accept, or facilitate monetary payments directly through the Platform\'s features.',
+            'Advertise or offer to sell goods or services through the Platform.',
+            'Sell or otherwise transfer your account profile to another person or entity.',
+            'Process, accept, or facilitate monetary payments or financial transactions directly through the Platform\'s messaging, listing, or account features.',
             'Misrepresent your organization\'s status as a registered nonprofit or charitable entity.',
-            'List items you do not own or have the right to give away, or misrepresent their condition, quantity, or nature.',
-            'List items that are illegal, hazardous, recalled, expired, or unsafe for use.',
-            'Engage in fraudulent, abusive, or harassing conduct, or violate the rights of any other user.',
-            'Request deletion of your account or organization while you have active or pending donation transactions. All pending and in-progress transactions must be cancelled before an account or organization may be deleted.',
+            'List items for donation that you do not own, possess, or have the right to give away, or misrepresent the condition, quantity, or nature of donated goods.',
+            'List donations of items that are illegal, hazardous, recalled, expired, or unsafe for use.',
+            'Engage in any conduct that is fraudulent, abusive, harassing, or that violates the rights of any other user.',
+            'Request the deletion of your account or organization while you have active or pending donation transactions. All pending and in-progress transactions must be cancelled before an account or organization may be deleted.',
           ].map(item => (
             <li class="flex gap-3 text-sm text-slate-600 bg-slate-50 rounded-lg px-3 py-2.5">
               <span class="text-red-400 font-bold shrink-0 mt-0.5">✗</span>
@@ -201,58 +198,61 @@ const sections = [
         </p>
       </section>
 
+      <!-- Section 6 -->
       <section id="user-content" class="mb-12 scroll-mt-24">
         <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">6. User Content and Reviews</h2>
         <div class="space-y-4 text-sm text-slate-600 leading-relaxed">
           <p>
-            Users retain ownership of content they upload (such as listing photos and descriptions), but grant
-            Suslify a non-exclusive, worldwide, royalty-free license to display and use such content as necessary
-            to operate the Platform.
+            The Platform does not currently include a review or rating feature. If Suslify introduces the
+            ability for Donors and Nonprofits to leave reviews or ratings of one another following a donation
+            interaction ("Reviews") in the future, the following terms will apply: by submitting a Review, you
+            grant Suslify a non-exclusive, worldwide, royalty-free license to display, reproduce, and distribute
+            that Review on the Platform. Suslify will not guarantee the accuracy, completeness, or truthfulness
+            of any Review and will not be responsible for any Review submitted by a user. We reserve the right,
+            but not the obligation, to remove or moderate any Review that violates these Terms or that we
+            determine, in our sole discretion, to be abusive, false, or otherwise inappropriate.
           </p>
-          <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-            <p class="font-semibold text-slate-800 mb-1">Reviews — coming in a future update</p>
-            <p class="text-slate-500">
-              The Platform does not currently include a review or rating feature. If Suslify introduces the
-              ability for Donors and Nonprofits to leave reviews or ratings following a donation interaction
-              in the future, the following terms will apply: by submitting a Review, you grant Suslify a
-              non-exclusive, worldwide, royalty-free license to display, reproduce, and distribute that Review
-              on the Platform. Suslify reserves the right to remove any Review that violates these Terms or
-              that we determine to be abusive, false, or otherwise inappropriate.
-            </p>
-          </div>
         </div>
       </section>
 
+      <!-- Section 7 -->
       <section id="third-party" class="mb-12 scroll-mt-24">
         <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">7. Third-Party Links</h2>
         <p class="text-sm text-slate-600 leading-relaxed">
-          The Platform may contain links to third-party websites or services not owned or controlled by Suslify.
-          We have no control over, and assume no responsibility for, the content, privacy policies, or practices
-          of any third-party websites. Suslify shall not be liable for any damage or loss caused by or in
-          connection with the use of any third-party content or services.
+          The Platform may contain links to third-party websites or services that are not owned or controlled
+          by Suslify. We have no control over, and assume no responsibility for, the content, privacy policies,
+          or practices of any third-party websites. You acknowledge and agree that Suslify shall not be liable,
+          directly or indirectly, for any damage or loss caused by or in connection with the use of any such
+          content, goods, or services available through such websites.
         </p>
       </section>
 
+      <!-- Section 8 -->
       <section id="ip" class="mb-12 scroll-mt-24">
         <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">8. Intellectual Property; Copyright Complaints</h2>
         <div class="space-y-4 text-sm text-slate-600 leading-relaxed">
           <p>
             All content on the Platform created by Suslify — including the Suslify name, logo, and platform
-            design — is the property of Suslify and may not be used without permission.
+            design — is the property of Suslify and may not be used without permission. Users retain ownership
+            of content they upload (such as listing photos and descriptions), but grant Suslify a license to
+            display and use such content as necessary to operate the Platform.
           </p>
           <p>
-            If you believe content on the Platform infringes your copyright, notify us at{' '}
-            <a href="mailto:hello@suslify.com" class="text-brand-600 hover:underline">hello@suslify.com</a>{' '}
-            with: (a) a description of the copyrighted work; (b) where the infringing material is located;
-            (c) your contact information; (d) a good-faith belief statement; and (e) a statement under penalty
-            of perjury that the information is accurate.
+            If you believe content on the Platform infringes your copyright, you may notify us by providing:
+            (a) a description of the copyrighted work you believe has been infringed; (b) a description of
+            where the allegedly infringing material is located on the Platform; (c) your contact information;
+            (d) a statement that you have a good-faith belief that the use is unauthorized; and (e) a statement,
+            under penalty of perjury, that the information in your notice is accurate. Notices should be sent
+            to{' '}
+            <a href="mailto:hello@suslify.com" class="text-brand-600 hover:underline">hello@suslify.com</a>.
           </p>
         </div>
       </section>
 
+      <!-- Section 9 -->
       <section id="disclaimer" class="mb-12 scroll-mt-24">
         <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">9. Disclaimer of Warranties</h2>
-        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 text-sm text-slate-600 leading-relaxed">
+        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 text-sm text-slate-600 leading-relaxed uppercase">
           The Platform is provided on an "as is" and "as available" basis, without warranties of any kind,
           either express or implied, including but not limited to implied warranties of merchantability,
           fitness for a particular purpose, and non-infringement. Suslify does not warrant that the Platform
@@ -260,84 +260,94 @@ const sections = [
         </div>
       </section>
 
+      <!-- Section 10 -->
       <section id="liability" class="mb-12 scroll-mt-24">
         <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">10. Limitation of Liability</h2>
         <div class="space-y-4 text-sm text-slate-600 leading-relaxed">
           <p>
             To the fullest extent permitted by law, Suslify's total liability to you for any claim arising out
             of or relating to these Terms or the Platform shall not exceed <strong class="text-slate-800">$100 USD</strong>.
-            This applies regardless of the legal theory on which a claim is based.
+            This limitation applies regardless of the legal theory on which a claim is based, and whether or
+            not Suslify has been advised of the possibility of such damages.
           </p>
           <p>
-            Nothing in these Terms limits liability for personal injury or death to the extent such liability
-            cannot be excluded under applicable law. Suslify is not a party to, and assumes no responsibility
-            for, the conduct of Donors or Nonprofits during in-person interactions or exchanges.
+            Nothing in these Terms is intended to limit liability for personal injury or death to the extent
+            such liability cannot be limited or excluded under applicable law. Suslify is not a party to, and
+            assumes no responsibility for, the conduct of Donors or Nonprofits during in-person interactions,
+            pickups, or exchanges arranged through the Platform.
           </p>
-          <p>
+          <p class="uppercase">
             In no event shall Suslify be liable for any indirect, incidental, special, consequential, or
             punitive damages arising out of or related to your use of the Platform.
           </p>
         </div>
       </section>
 
+      <!-- Section 11 -->
       <section id="time-limit" class="mb-12 scroll-mt-24">
         <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">11. Time Limit on Claims</h2>
         <p class="text-sm text-slate-600 leading-relaxed">
-          Any claim arising out of or related to these Terms or the Platform must be commenced within
-          <strong class="text-slate-800">one (1) year</strong> after the cause of action accrues; otherwise,
-          such claim is permanently barred.
+          Any cause of action or claim you may have arising out of or related to these Terms or the Platform
+          must be commenced within <strong class="text-slate-800">one (1) year</strong> after the cause of
+          action accrues; otherwise, such cause of action or claim is permanently barred.
         </p>
       </section>
 
+      <!-- Section 12 -->
       <section id="disputes" class="mb-12 scroll-mt-24">
         <h2 class="text-xl font-bold text-slate-900 mb-6 pb-3 border-b border-slate-100">12. Dispute Resolution</h2>
         <div class="space-y-5 text-sm text-slate-600 leading-relaxed">
           <div>
             <h3 class="font-semibold text-slate-800 mb-1">12.1 Informal Negotiations</h3>
             <p>
-              Before initiating arbitration, both parties agree to first attempt to resolve any dispute
-              informally for at least <strong class="text-slate-800">30 days</strong>, initiated by written
-              notice describing the dispute.
+              In the event of any dispute, claim, or controversy arising out of or relating to these Terms or
+              the Platform, the parties agree to first attempt to resolve the dispute informally for at least
+              <strong class="text-slate-800">30 days</strong> before initiating arbitration. Either party may
+              initiate informal negotiations by sending written notice to the other party describing the dispute.
             </p>
           </div>
           <div>
             <h3 class="font-semibold text-slate-800 mb-1">12.2 Binding Arbitration</h3>
             <p>
-              If informal negotiations fail, disputes shall be resolved through binding arbitration (not in
-              court), except either party may bring an individual action in small claims court. Arbitration
-              shall be conducted in the <strong class="text-slate-800">State of Illinois, United States</strong>.
+              If the parties are unable to resolve a dispute through informal negotiations within thirty (30)
+              days, the dispute shall be resolved through binding arbitration rather than in court, except that
+              either party may bring an individual action in small claims court. Arbitration shall be conducted
+              in the <strong class="text-slate-800">State of Illinois, United States</strong>, in accordance
+              with the rules of a mutually agreed-upon arbitration organization.
             </p>
           </div>
           <div>
             <h3 class="font-semibold text-slate-800 mb-1">12.3 Governing Law</h3>
             <p>
-              These Terms are governed by the laws of the <strong class="text-slate-800">United States and
-              the State of Illinois</strong>, without regard to conflict-of-law principles. Illinois is
-              designated here because it is where the operator of Suslify is currently residing for educational
-              purposes.
+              These Terms shall be governed by and construed in accordance with the laws of the
+              <strong class="text-slate-800">United States and the State of Illinois</strong>, without regard
+              to conflict-of-law principles.
             </p>
           </div>
         </div>
       </section>
 
+      <!-- Section 13 -->
       <section id="business" class="mb-12 scroll-mt-24">
         <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">13. Business Transfers</h2>
         <p class="text-sm text-slate-600 leading-relaxed">
-          In the event Suslify is involved in a merger, acquisition, financing, or sale of assets, personal
-          information may be transferred to the relevant third party as part of that transaction. We will
-          notify users of any such change as required by applicable law.
+          In the event Suslify is involved in a merger, acquisition, financing, or sale of all or a portion of
+          its assets, personal information may be shared with or transferred to the relevant third party as part
+          of that transaction. We will notify users of any such change as required by applicable law.
         </p>
       </section>
 
+      <!-- Section 14 -->
       <section id="changes" class="mb-12 scroll-mt-24">
         <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">14. Changes to These Terms</h2>
         <p class="text-sm text-slate-600 leading-relaxed">
-          We may update these Terms from time to time. We will post the updated Terms on the Platform and
-          update the "Last Updated" date above. Continued use of the Platform after changes take effect
-          constitutes acceptance of the revised Terms.
+          We may update these Terms from time to time. We will notify users of material changes by posting the
+          updated Terms on the Platform and updating the "Last Updated" date above. Continued use of the
+          Platform after changes take effect constitutes acceptance of the revised Terms.
         </p>
       </section>
 
+      <!-- Section 15 -->
       <section id="contact" class="mb-4 scroll-mt-24">
         <h2 class="text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">15. Contact Us</h2>
         <div class="p-6 bg-brand-50 rounded-2xl border border-brand-100">
@@ -352,4 +362,5 @@ const sections = [
     </article>
   </div>
 
-*/}
+  <Footer />
+</BaseLayout>

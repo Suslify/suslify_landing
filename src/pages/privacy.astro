@@ -2,33 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
----
-
-<BaseLayout
-  title="Privacy Policy | Suslify"
-  description="Suslify's Privacy Policy describes how we collect, use, and protect your personal information when you use our platform."
->
-  <Header />
-
-  <section class="bg-white pt-20 pb-10 md:pt-28 border-b border-slate-100">
-    <div class="max-w-4xl mx-auto px-5">
-      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 mb-3 leading-tight">
-        Privacy Policy
-      </h1>
-    </div>
-  </section>
-
-  <div class="max-w-4xl mx-auto px-5 py-20 text-center">
-    <p class="text-slate-500 text-lg">Our Privacy Policy is currently being reviewed and will be published here shortly.</p>
-    <p class="text-slate-400 text-sm mt-3">In the meantime, please contact us at <a href="mailto:hello@suslify.com" class="text-brand-600 hover:underline">hello@suslify.com</a> with any questions.</p>
-  </div>
-
-  <Footer />
-</BaseLayout>
-
-{/*
-
-COMMENTED OUT — restore by removing the coming-soon section above and uncommenting this block
 
 const sections = [
   { id: 'information-we-collect',   label: '1. Information We Collect' },
@@ -44,13 +17,21 @@ const sections = [
   { id: 'security',                 label: '11. Security' },
   { id: 'contact',                  label: '12. Data Protection Contact' },
   { id: 'future-expansion',         label: '13. Future Expansion' },
-  { id: 'children',                 label: '14. Children\'s Privacy' },
+  { id: 'children',                 label: "14. Children's Privacy" },
   { id: 'changes',                  label: '15. Changes to This Policy' },
   { id: 'contact-us',               label: '16. Contact Us' },
 ];
+---
+
+<BaseLayout
+  title="Privacy Policy | Suslify"
+  description="Suslify's Privacy Policy describes how we collect, use, and protect your personal information when you use our platform."
+>
+  <Header />
 
   <div class="max-w-6xl mx-auto px-5 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-12 items-start">
 
+    <!-- Sidebar TOC -->
     <aside class="hidden lg:block sticky top-24">
       <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Contents</p>
       <nav class="space-y-1">
@@ -60,15 +41,16 @@ const sections = [
       </nav>
     </aside>
 
+    <!-- Main content -->
     <main class="min-w-0">
       <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 mb-2">Privacy Policy</h1>
-      <p class="text-sm text-slate-400 mb-10">Last Updated: 30 June, 2026</p>
+      <p class="text-sm text-slate-400 mb-10">Last Updated: 2 July, 2026</p>
 
       <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed">
 
         <p>This Privacy Policy describes how Suslify ("Suslify," "we," "us," or "our") collects, uses, discloses, and protects personal information when you use our platform, including our website (suslify.com) and web/mobile application (collectively, the "Platform"). This Policy applies to Donors, Nonprofits, and all other visitors and users of the Platform.</p>
 
-        <p>Suslify is currently a personal project operated by Sana Idemakpan Udoekong, an individual, and is not yet a registered business entity. References to "we," "us," or "our" in this Policy refer to Sana Idemakpan Udoekong operating as Suslify.</p>
+        <p>Suslify is currently a personal educational project operated by Sana Udoekong, an individual, and is not yet a registered business entity. References to "we," "us," or "our" in this Policy refer to Sana Udoekong operating as Suslify.</p>
 
         <p>The Platform is currently in beta and is provided for testing purposes. Features, functionality, and the data practices described in this Policy may change as the Platform develops, and this Policy will be updated accordingly.</p>
 
@@ -86,7 +68,7 @@ const sections = [
           <li>Photographs you upload (e.g., of donation items, or a profile photo)</li>
           <li>Nonprofit organization details, such as organization name, logo, causes, address and description, where applicable</li>
           <li>Donation listing information, including item descriptions, categories, and condition</li>
-          <li>Any information you submit through reviews, support inquiries, or other communications with us</li>
+          <li>Any information you submit through Reviews, support inquiries, or other communications with us</li>
         </ul>
 
         <h3>1.2 Information Collected Automatically</h3>
@@ -140,7 +122,8 @@ const sections = [
           <li><strong>Google</strong> — Google Search Console, for website search performance analysis</li>
           <li><strong>Netlify</strong> — website hosting</li>
           <li><strong>Railway</strong> — cloud infrastructure and application hosting</li>
-          <li><strong>PostHog</strong> — product analytics and usage tracking</li>
+          <li><strong>Firebase</strong> — PWA hosting</li>
+          <li><strong>Firebase Analytics</strong> — product analytics and usage tracking. We use Firebase Analytics, a service provided by Google LLC, to collect anonymized usage data such as screen views and in-app events. This data helps us understand how users interact with the Platform. Google may process this data on its servers in accordance with Google's Privacy Policy.</li>
           <li><strong>Nominatim / OpenStreetMap</strong> — geocoding services used to convert addresses provided in donation listings into approximate geographic coordinates</li>
         </ul>
 
@@ -187,7 +170,7 @@ const sections = [
         <p>We do not collect information related to protected characteristics (such as age, gender, or race), and we do not sell personal information as defined under applicable law.</p>
 
         <h2 id="cookies">9. Cookies and Tracking Technologies</h2>
-        <p>The Platform does not currently use cookies or web beacons. We use PostHog for product analytics and Google Search Console for website search performance; these tools may collect log, device, and usage data as described in Section 1.2 above.</p>
+        <p>The Platform does not currently use cookies or web beacons. We use Firebase Analytics for product analytics and Google Search Console for website search performance; these tools may collect log, device, and usage data as described in Section 1.2 above.</p>
 
         <h2 id="shine-the-light">10. California "Shine the Light" Disclosure</h2>
         <p>California residents may request information about our disclosure of personal information to third parties for those third parties' own direct marketing purposes. As described in this Policy, we do not share personal information with third parties for their own direct marketing purposes.</p>
@@ -217,4 +200,5 @@ const sections = [
     </main>
   </div>
 
-*/}
+  <Footer />
+</BaseLayout>
