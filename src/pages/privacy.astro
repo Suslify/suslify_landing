@@ -2,6 +2,33 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Privacy Policy | Suslify"
+  description="Suslify's Privacy Policy describes how we collect, use, and protect your personal information when you use our platform."
+>
+  <Header />
+
+  <section class="bg-white pt-20 pb-10 md:pt-28 border-b border-slate-100">
+    <div class="max-w-4xl mx-auto px-5">
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 mb-3 leading-tight">
+        Privacy Policy
+      </h1>
+    </div>
+  </section>
+
+  <div class="max-w-4xl mx-auto px-5 py-20 text-center">
+    <p class="text-slate-500 text-lg">Our Privacy Policy is currently being reviewed and will be published here shortly.</p>
+    <p class="text-slate-400 text-sm mt-3">In the meantime, please contact us at <a href="mailto:hello@suslify.com" class="text-brand-600 hover:underline">hello@suslify.com</a> with any questions.</p>
+  </div>
+
+  <Footer />
+</BaseLayout>
+
+{/*
+
+COMMENTED OUT — restore by removing the coming-soon section above and uncommenting this block
 
 const sections = [
   { id: 'information-we-collect',   label: '1. Information We Collect' },
@@ -21,17 +48,9 @@ const sections = [
   { id: 'changes',                  label: '15. Changes to This Policy' },
   { id: 'contact-us',               label: '16. Contact Us' },
 ];
----
-
-<BaseLayout
-  title="Privacy Policy | Suslify"
-  description="Suslify's Privacy Policy describes how we collect, use, and protect your personal information when you use our platform."
->
-  <Header />
 
   <div class="max-w-6xl mx-auto px-5 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-12 items-start">
 
-    <!-- Sidebar TOC -->
     <aside class="hidden lg:block sticky top-24">
       <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Contents</p>
       <nav class="space-y-1">
@@ -41,7 +60,6 @@ const sections = [
       </nav>
     </aside>
 
-    <!-- Main content -->
     <main class="min-w-0">
       <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 mb-2">Privacy Policy</h1>
       <p class="text-sm text-slate-400 mb-10">Last Updated: 30 June, 2026</p>
@@ -199,5 +217,4 @@ const sections = [
     </main>
   </div>
 
-  <Footer />
-</BaseLayout>
+*/}
