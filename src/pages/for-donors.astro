@@ -5,8 +5,8 @@ import Footer from '../components/Footer.astro';
 ---
 
 <BaseLayout
-  title="For Donors | Suslify | Donate Items to Charities Near You"
-  description="Donate items you no longer need to charities near you. Post your item, match it to an active request, and coordinate pickup. All in the Suslify app for free."
+  title="For Donors | Suslify | Donate Items to Non-profits Near You"
+  description="Donate items you no longer need to non-profits near you. Post your item, match it to an active request, and coordinate pickup. All in the Suslify app for free."
 >
   <Header activePage="For donors" />
 
@@ -24,7 +24,7 @@ import Footer from '../components/Footer.astro';
         </h1>
         <p class="text-lg text-slate-500 leading-relaxed mb-8 max-w-lg">
           Got a sofa, clothes, kitchen gear, or anything else collecting dust?
-          Suslify makes it simple to post your item and get it to a charity or
+          Suslify makes it simple to post your item and get it to a non-profit or
           person who actually needs it, right in your neighbourhood.
         </p>
         <a href="/#beta"
@@ -34,11 +34,10 @@ import Footer from '../components/Footer.astro';
       </div>
       <div class="flex justify-center lg:justify-end">
         <div class="relative w-60 sm:w-72">
-          <div class="absolute inset-0 scale-110 rounded-[3rem] bg-brand-300/20 blur-2xl"></div>
-          <div class="relative bg-slate-900 rounded-[3rem] p-2.5 shadow-2xl ring-1 ring-white/10">
-            <div class="absolute top-5 left-1/2 -translate-x-1/2 w-20 h-5 bg-slate-900 rounded-full z-10"></div>
-            <div class="bg-brand-50 rounded-[2.4rem] overflow-hidden min-h-[420px] flex items-center justify-center">
-              <img src="/screens/item-detail.png" alt="Suslify item detail screen" class="w-full h-auto" loading="eager"/>
+          <div class="absolute inset-0 scale-110 rounded-[3rem] bg-brand-300/20 blur-2xl pointer-events-none"></div>
+          <div class="relative bg-slate-900 rounded-[3rem] p-2 shadow-2xl ring-1 ring-white/10">
+            <div class="rounded-[2.6rem] overflow-hidden">
+              <img src="/screens/offer-item.png" alt="Offering an item to a non-profit request" class="w-full h-auto block" loading="eager"/>
             </div>
           </div>
         </div>
@@ -57,19 +56,19 @@ import Footer from '../components/Footer.astro';
         {[
           {
             n: '1', title: 'Create a free account',
-            desc: 'Sign up in under a minute. Set your location and Suslify will show you charities and people nearby.',
+            desc: 'Sign up in under a minute. Set your location and Suslify will show you non-profits and people nearby.',
           },
           {
             n: '2', title: 'Post your item',
             desc: 'Add photos, a short description, condition, and quantity. Choose a category and your listing is live instantly.',
           },
           {
-            n: '3', title: 'Get matched or offer directly',
-            desc: 'Charities and individuals with active requests get notified when you post. You can also browse open requests and offer your item directly to someone who needs it. You\'re always in control of who receives it.',
+            n: '3', title: 'Get your item requested',
+            desc: 'Non-profits and individuals can browse posted donations and request yours directly. You can also browse open requests and offer your item to someone who needs it. You\'re always in control of who receives it.',
           },
           {
             n: '4', title: 'Message and arrange pickup',
-            desc: 'Use in-app messaging to sort out where and when. No sharing your personal number.',
+            desc: 'Use in-app messaging to sort out where and when. No sharing your personal number. Accept or decline incoming transaction requests, then set up a pickup arrangement, all in one place.',
           },
           {
             n: '5', title: 'Confirm and you\'re done',
@@ -86,6 +85,46 @@ import Footer from '../components/Footer.astro';
           </li>
         ))}
       </ol>
+    </div>
+  </section>
+
+  <!-- Transactions preview -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+      <!-- copy -->
+      <div>
+        <p class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-4">Transactions</p>
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 mb-5 leading-tight">
+          Accept, decline,<br />and coordinate in one place.
+        </h2>
+        <p class="text-slate-500 text-lg leading-relaxed max-w-md">
+          When a non-profit requests your donated item, you'll see it instantly in Transactions. Accept to confirm, then use in-app messaging to arrange the handoff — no back-and-forth outside the app.
+        </p>
+      </div>
+      <!-- phone -->
+      <div class="flex justify-center lg:justify-end">
+        <div class="relative w-56 sm:w-64">
+          <div class="absolute inset-0 scale-110 rounded-[3rem] bg-brand-300/15 blur-2xl pointer-events-none"></div>
+          <div class="relative bg-slate-900 rounded-[3rem] p-2 shadow-2xl ring-1 ring-white/10">
+            <div class="rounded-[2.6rem] overflow-hidden">
+              <img src="/screens/transactions.png" alt="Transactions screen showing Accept and Decline buttons with request accepted popup" class="w-full h-auto block" loading="lazy"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community feed highlight -->
+  <section class="py-12 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="bg-white border border-slate-100 rounded-2xl p-8 shadow-card flex flex-col sm:flex-row gap-6 items-start">
+        <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center text-2xl shrink-0">📣</div>
+        <div>
+          <h3 class="font-bold text-slate-900 text-lg mb-2">Stay connected with the community feed</h3>
+          <p class="text-slate-500 leading-relaxed">Discover volunteer opportunities, follow announcements from non-profits you support, and stay up to date with local events and campaigns — all inside the app.</p>
+        </div>
+      </div>
     </div>
   </section>
 

@@ -7,14 +7,14 @@ const features = [
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>`,
     title: 'Post donations or request items',
-    desc: 'Create a listing with photos, condition, and quantity. Donors and charities both post and your listing goes live in seconds.',
-    points: ['Add photos, condition, and quantity', 'Set your location and category', 'Request specific items your charity needs', 'Edit or close listings any time'],
+    desc: 'Create a listing with photos, condition, and quantity. Donors and non-profits both post and your listing goes live in seconds.',
+    points: ['Add photos, condition, and quantity', 'Set your location and category', 'Request specific items your non-profit needs', 'Edit or close listings any time'],
   },
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>`,
     title: 'Browse and match items',
     desc: 'Search active donations and open requests nearby. Find what you need or match your item to someone who needs it.',
-    points: ['Filter by category, condition, and distance', 'See charity and individual requests in real time', 'Offer your item directly to someone who has requested it', 'Claim a listed donation or fulfill an open request'],
+    points: ['Filter by category, condition, and distance', 'See non-profit and individual requests in real time', 'Offer your item directly to someone who has requested it', 'Claim a listed donation or fulfill an open request'],
   },
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`,
@@ -26,7 +26,7 @@ const features = [
     icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>`,
     title: 'Real-time notifications',
     desc: 'Stay informed the moment something happens: a match, a new message, or a status update on your donation.',
-    points: ['Instant alerts for messages and matches', 'Pickup confirmations and status changes', 'Charity news and urgent need alerts'],
+    points: ['Instant alerts for messages and matches', 'Pickup confirmations and status changes', 'Non-profit news and urgent need alerts'],
   },
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>`,
@@ -37,8 +37,8 @@ const features = [
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>`,
     title: 'Community feed',
-    desc: 'Follow announcements, events, and fundraisers from charities you care about. All in one scrollable feed.',
-    points: ['Filter by announcements, events, and news', 'Like, comment, and share posts from charities', 'Stay informed about urgent needs and drives'],
+    desc: 'Follow announcements, events, and fundraisers from non-profits you care about. All in one scrollable feed.',
+    points: ['Filter by announcements, events, and news', 'Like, comment, and share posts from non-profits', 'Stay informed about urgent needs and drives'],
   },
 ];
 
@@ -46,17 +46,17 @@ const steps = [
   {
     n: '1',
     title: 'Create your account',
-    desc: 'Sign up in under a minute. Set your location and whether you\'re a donor, a charity, or both.',
+    desc: 'Sign up in under a minute. Set your location and whether you\'re a donor, a non-profit, or both.',
   },
   {
     n: '2',
     title: 'Post or browse',
-    desc: 'Add an item to donate with photos and a description, or search active requests from charities and individuals nearby.',
+    desc: 'Add an item to donate with photos and a description, or search active requests from non-profits and individuals nearby.',
   },
   {
     n: '3',
     title: 'Match and message',
-    desc: 'Browse open requests from charities and individuals and offer your item directly to someone who needs it. Or claim a listed donation for yourself. Message in-app to arrange pickup.',
+    desc: 'Browse open requests from non-profits and individuals and offer your item directly to someone who needs it. Or claim a listed donation for yourself. Message in-app to arrange pickup.',
   },
   {
     n: '4',
@@ -93,7 +93,7 @@ const steps = [
           </h1>
 
           <p class="text-lg text-brand-100/70 leading-relaxed max-w-lg mb-8">
-            Suslify connects donors with charities. Post an item, request what
+            Suslify connects donors with non-profits. Post an item, request what
             you need, message donors directly, and track every donation. All in
             one free app.
           </p>
@@ -116,7 +116,7 @@ const steps = [
           <!-- Trust signals -->
           <div class="flex flex-wrap gap-5">
             {[
-              'Free for donors & charities',
+              'Free for donors & non-profits',
               'In-app messaging',
               'Real-time notifications',
             ].map((label) => (
@@ -137,10 +137,9 @@ const steps = [
             <!-- glow behind phone -->
             <div class="absolute inset-0 scale-110 rounded-[3rem] bg-brand-400/30 blur-3xl"></div>
             <!-- phone frame -->
-            <div class="relative w-64 sm:w-72 bg-slate-900 rounded-[3rem] p-2.5 shadow-2xl ring-1 ring-white/10 phone-float">
-              <div class="absolute top-5 left-1/2 -translate-x-1/2 w-24 h-6 bg-slate-900 rounded-full z-10 ring-1 ring-white/5"></div>
-              <div class="bg-brand-50 rounded-[2.4rem] overflow-hidden min-h-[460px] flex items-center justify-center">
-                <img src="/screens/home.png" alt="Suslify home feed showing donation listings" class="w-full h-auto" loading="eager"/>
+            <div class="relative w-64 sm:w-72 bg-slate-900 rounded-[3rem] p-2 shadow-2xl ring-1 ring-white/10 phone-float">
+              <div class="rounded-[2.6rem] overflow-hidden">
+                <img src="/screens/home.png" alt="Suslify home feed showing donation listings" class="w-full h-auto block" loading="eager"/>
               </div>
             </div>
             <!-- floating badge -->
@@ -165,7 +164,7 @@ const steps = [
         {[
           { src: '/screens/home.png',           alt: 'Suslify home feed showing available donations nearby', label: 'Browse donations' },
           { src: '/screens/request-detail.png', alt: 'Request details screen with Offer an Item button', label: 'Offer to requesters' },
-          { src: '/screens/feed.png',           alt: 'Community feed with charity announcements and events', label: 'Community feed' },
+          { src: '/screens/feed.png',           alt: 'Community feed with non-profit announcements and events', label: 'Community feed' },
         ].map(({ src, alt, label }, i) => (
           <div class={`rounded-2xl overflow-hidden bg-white border border-brand-100 shadow-card flex flex-col ${i === 1 ? '-translate-y-3 shadow-card-hover' : ''}`}>
             <div class="bg-brand-50/60 p-4">
@@ -253,10 +252,9 @@ const steps = [
         <div class="relative flex justify-center lg:justify-end">
           <div class="relative w-60 sm:w-72">
             <div class="absolute inset-0 scale-105 rounded-[3rem] bg-brand-300/20 blur-2xl"></div>
-            <div class="relative bg-slate-900 rounded-[3rem] p-2.5 shadow-2xl ring-1 ring-white/10">
-              <div class="absolute top-5 left-1/2 -translate-x-1/2 w-20 h-5 bg-slate-900 rounded-full z-10"></div>
-              <div class="bg-brand-50 rounded-[2.4rem] overflow-hidden min-h-[420px] flex items-center justify-center">
-                <img src="/screens/request-detail.png" alt="Request details screen showing Offer an Item button" class="w-full h-auto" loading="lazy"/>
+            <div class="relative bg-slate-900 rounded-[3rem] p-2 shadow-2xl ring-1 ring-white/10">
+              <div class="rounded-[2.6rem] overflow-hidden">
+                <img src="/screens/request-detail.png" alt="Request details screen showing Offer an Item button" class="w-full h-auto block" loading="lazy"/>
               </div>
             </div>
           </div>
@@ -267,7 +265,7 @@ const steps = [
   </section>
 
   <!-- ── FOR CHARITIES ── -->
-  <section id="for-charities-strip" class="py-24 bg-brand-900">
+  <section id="for-non-profits-strip" class="py-24 bg-brand-900">
     <div class="max-w-6xl mx-auto px-5">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
@@ -275,10 +273,9 @@ const steps = [
         <div class="relative flex justify-center order-2 lg:order-1">
           <div class="relative w-60 sm:w-72">
             <div class="absolute inset-0 scale-105 rounded-[3rem] bg-brand-500/30 blur-2xl"></div>
-            <div class="relative bg-slate-900 rounded-[3rem] p-2.5 shadow-2xl ring-1 ring-white/10">
-              <div class="absolute top-5 left-1/2 -translate-x-1/2 w-20 h-5 bg-slate-900 rounded-full z-10"></div>
-              <div class="bg-brand-950/60 rounded-[2.4rem] overflow-hidden min-h-[420px] flex items-center justify-center">
-                <img src="/screens/feed.png" alt="Community feed showing charity announcements and events" class="w-full h-auto" loading="lazy"/>
+            <div class="relative bg-slate-900 rounded-[3rem] p-2 shadow-2xl ring-1 ring-white/10">
+              <div class="rounded-[2.6rem] overflow-hidden">
+                <img src="/screens/feed.png" alt="Community feed showing non-profit announcements and events" class="w-full h-auto block" loading="lazy"/>
               </div>
             </div>
           </div>
@@ -286,19 +283,19 @@ const steps = [
 
         <!-- Copy right -->
         <div class="order-1 lg:order-2">
-          <p class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-4">For charities &amp; nonprofits</p>
+          <p class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-4">For non-profits &amp; nonprofits</p>
           <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-5 leading-tight">
             Built for<br />organizations too
           </h2>
           <p class="text-brand-100/70 text-lg leading-relaxed mb-8">
-            Suslify isn't just for individual donors. Charities get their own
+            Suslify isn't just for individual donors. Non-profits get their own
             profile, direct messaging with donors, and a full request board.
             All completely free.
           </p>
 
           <ul class="space-y-4 mb-10">
             {[
-              'Post urgent item requests your charity needs right now',
+              'Post urgent item requests your non-profit needs right now',
               'Message donors directly to coordinate large or recurring pickups',
               'Track everything received with a full transaction history',
               'Get notified instantly when a donor matches your request',
@@ -315,9 +312,9 @@ const steps = [
           </ul>
 
           <div class="flex flex-wrap gap-3">
-            <a href="/for-charities"
+            <a href="/for-non-profits"
                class="bg-brand-500 hover:bg-brand-400 text-white font-bold px-6 py-3 rounded-full transition-all shadow-lg shadow-brand-500/30 text-sm">
-              Learn more for charities
+              Learn more for non-profits
             </a>
             <a href="#beta"
                class="border border-white/20 hover:border-white/40 text-white/80 hover:text-white font-bold px-6 py-3 rounded-full transition-all text-sm">
@@ -331,7 +328,7 @@ const steps = [
   </section>
 
   <!-- ── BETA SIGNUP FORM ── -->
-  <section id="beta" class="py-24 bg-white">
+  <section id="beta" class="py-24 bg-white scroll-mt-20">
     <div class="max-w-2xl mx-auto px-5">
 
       <div class="text-center mb-10">
@@ -341,7 +338,7 @@ const steps = [
         </h2>
         <p class="text-slate-500 leading-relaxed max-w-md mx-auto">
           Suslify is launching in beta. Sign up now to get early access, free
-          for donors and charities. No credit card, no commitment.
+          for donors and non-profits. No credit card, no commitment.
         </p>
       </div>
 
@@ -382,7 +379,7 @@ const steps = [
             id="beta-reason"
             name="entry.839337160"
             rows="4"
-            placeholder="Are you a donor, a charity, or just curious? Tell us a little about yourself..."
+            placeholder="Are you a donor, a non-profit, or just curious? Tell us a little about yourself..."
             class="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-brand-400 transition resize-none"
           ></textarea>
         </div>
@@ -480,12 +477,21 @@ const steps = [
           <div class="w-11 h-11 bg-brand-50 rounded-xl flex items-center justify-center mb-4 text-xl">✉️</div>
           <h3 class="font-bold text-slate-900 mb-2">Contact us</h3>
           <p class="text-sm text-slate-500 leading-relaxed mb-5">
-            For partnerships, press, or support. Email us directly.
+            For partnerships, questions, or feedback — we'd love to hear from you.
           </p>
-          <a href="mailto:hello@suslify.com"
-             class="inline-flex bg-brand-500 hover:bg-brand-600 text-white font-bold text-sm px-5 py-2.5 rounded-full transition-all shadow-md shadow-brand-500/20">
-            hello@suslify.com
-          </a>
+          <div class="flex items-center gap-3">
+            <a href="mailto:hello@suslify.com"
+               class="inline-flex bg-brand-500 hover:bg-brand-600 text-white font-bold text-sm px-5 py-2.5 rounded-full transition-all shadow-md shadow-brand-500/20">
+              hello@suslify.com
+            </a>
+            <a href="https://linkedin.com/company/suslify" target="_blank" rel="noreferrer"
+               class="w-10 h-10 flex items-center justify-center rounded-full border border-slate-200 hover:border-[#0A66C2] hover:bg-[#0A66C2] text-slate-400 hover:text-white transition-all"
+               aria-label="Suslify on LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+          </div>
         </div>
 
         <div class="bg-white border border-slate-100 rounded-2xl p-7 shadow-card">
@@ -514,7 +520,7 @@ const steps = [
         <div class="relative">
           <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mb-3">Give smarter. Waste less.</h2>
           <p class="text-white/80 text-lg mb-8 max-w-lg mx-auto leading-relaxed">
-            Join donors and charities in the Suslify beta and start creating real
+            Join donors and non-profits in the Suslify beta and start creating real
             impact, for free.
           </p>
           <a href="#beta"

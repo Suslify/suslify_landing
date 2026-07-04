@@ -5,10 +5,10 @@ import Footer from '../components/Footer.astro';
 ---
 
 <BaseLayout
-  title="For Charities | Suslify | Free Item Donation Platform for Nonprofits"
-  description="Suslify is free for charities and nonprofits. Post item requests, receive donations from nearby donors, coordinate pickup through in-app messaging, and track everything received."
+  title="For Non-profits | Suslify | Free Item Donation Platform for Nonprofits"
+  description="Suslify is free for non-profits. Post item requests, receive donations from nearby donors, coordinate pickup through in-app messaging, and track everything received."
 >
-  <Header activePage="For charities" />
+  <Header activePage="For non-profits" />
 
   <!-- Hero -->
   <section class="relative overflow-hidden bg-brand-900 pt-20 pb-16 md:pt-28 md:pb-24 text-white">
@@ -18,15 +18,16 @@ import Footer from '../components/Footer.astro';
     </div>
     <div class="relative max-w-6xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       <div>
-        <p class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-4">For charities &amp; nonprofits</p>
+        <p class="text-xs font-bold uppercase tracking-widest text-brand-400 mb-4">For non-profits &amp; nonprofits</p>
         <h1 class="text-5xl sm:text-6xl font-black tracking-tight mb-6 leading-tight">
           Get the items<br />
-          <span class="text-brand-400">your charity needs.</span>
+          <span class="text-brand-400">your non-profit needs.</span>
         </h1>
         <p class="text-brand-100/80 text-lg leading-relaxed mb-8 max-w-lg">
-          Post item requests, receive donations from donors nearby, and manage
-          everything in one place, completely free for registered charities and
-          nonprofits.
+          Post item requests, request to get a posted item, and manage
+          everything in one place. Share events, announcements, volunteer
+          opportunities, and more in the community feed — completely free for
+          registered non-profits.
         </p>
         <div class="flex flex-wrap gap-3">
           <a href="/#beta"
@@ -39,13 +40,24 @@ import Footer from '../components/Footer.astro';
           </a>
         </div>
       </div>
-      <div class="flex justify-center lg:justify-end">
-        <div class="relative w-60 sm:w-72">
-          <div class="absolute inset-0 scale-110 rounded-[3rem] bg-brand-500/30 blur-2xl"></div>
-          <div class="relative bg-slate-900 rounded-[3rem] p-2.5 shadow-2xl ring-1 ring-white/10">
-            <div class="absolute top-5 left-1/2 -translate-x-1/2 w-20 h-5 bg-slate-900 rounded-full z-10"></div>
-            <div class="bg-brand-950/70 rounded-[2.4rem] overflow-hidden min-h-[420px] flex items-center justify-center">
-              <img src="/screens/requests.png" alt="Suslify charity request board" class="w-full h-auto" loading="eager"/>
+      <!-- 2-phone fan -->
+      <div class="flex justify-center lg:justify-center">
+        <div class="relative mr-8" style="width: 320px; height: 540px;">
+          <div class="absolute inset-0 rounded-[3rem] bg-brand-500/25 blur-3xl scale-110 pointer-events-none"></div>
+          <!-- back phone: requests list, rotated left -->
+          <div class="absolute left-0 top-6" style="transform: rotate(-7deg); transform-origin: bottom center; z-index: 1;">
+            <div class="w-44 bg-slate-900 rounded-[2.6rem] p-1.5 shadow-xl ring-1 ring-white/10">
+              <div class="rounded-[2.3rem] overflow-hidden">
+                <img src="/screens/requests.png" alt="Non-profit requests board" class="w-full h-auto block" loading="eager"/>
+              </div>
+            </div>
+          </div>
+          <!-- front phone: offer-item (donor offering to a request), rotated right -->
+          <div class="absolute right-0 top-0" style="transform: rotate(5deg); transform-origin: bottom center; z-index: 2;">
+            <div class="w-44 bg-slate-900 rounded-[2.6rem] p-1.5 shadow-2xl ring-1 ring-white/10">
+              <div class="rounded-[2.3rem] overflow-hidden">
+                <img src="/screens/offer-item.png" alt="Donor offering an item to a non-profit request" class="w-full h-auto block" loading="eager"/>
+              </div>
             </div>
           </div>
         </div>
@@ -53,11 +65,11 @@ import Footer from '../components/Footer.astro';
     </div>
   </section>
 
-  <!-- What charities get -->
+  <!-- What non-profits get -->
   <section class="py-20 bg-white">
     <div class="max-w-6xl mx-auto px-5">
       <div class="text-center mb-14">
-        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 mb-4">What your charity gets</h2>
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 mb-4">What your non-profit gets</h2>
         <p class="text-slate-500 text-lg max-w-xl mx-auto">Free tools built for the needs of real nonprofits.</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -65,12 +77,12 @@ import Footer from '../components/Footer.astro';
           {
             icon: '📋',
             title: 'Organization profile',
-            desc: 'A public page for your charity where donors can browse your active requests and learn about your mission.',
+            desc: 'A public page for your non-profit where donors can browse your active requests and learn about your mission.',
           },
           {
             icon: '📦',
-            title: 'Item request board',
-            desc: 'Post a list of items your charity needs right now. Donors nearby see your requests and can match items to them.',
+            title: 'Item requests',
+            desc: 'Post a request for items your organization needs. Browse posted donations from donors and request them directly. Donors nearby can also match items to your open requests.',
           },
           {
             icon: '💬',
@@ -78,9 +90,9 @@ import Footer from '../components/Footer.astro';
             desc: 'Communicate with donors directly inside the app to coordinate pickups without exchanging personal contact info.',
           },
           {
-            icon: '🔔',
-            title: 'Instant notifications',
-            desc: 'Get notified the moment a donor matches one of your requests or sends you a message.',
+            icon: '📣',
+            title: 'Community feed',
+            desc: 'Post announcements, share upcoming events, highlight volunteer opportunities, and link to external fundraisers. Keep supporters informed and engaged in one place.',
           },
           {
             icon: '📊',
@@ -90,7 +102,7 @@ import Footer from '../components/Footer.astro';
           {
             icon: '💚',
             title: 'Always free',
-            desc: 'Suslify is free for charities and nonprofits. No subscriptions, no listing fees, no commissions.',
+            desc: 'Suslify is free for non-profits. No subscriptions, no listing fees, no commissions.',
           },
         ].map(({ icon, title, desc }) => (
           <div class="bg-white border border-slate-100 rounded-2xl p-6 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all">
@@ -103,19 +115,19 @@ import Footer from '../components/Footer.astro';
     </div>
   </section>
 
-  <!-- How it works for charities -->
+  <!-- How it works for non-profits -->
   <section class="py-20 bg-slate-50">
     <div class="max-w-4xl mx-auto px-5">
       <div class="text-center mb-12">
-        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 mb-4">Getting started for charities</h2>
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 mb-4">Getting started for non-profits</h2>
         <p class="text-slate-500 text-lg">Up and running in minutes.</p>
       </div>
       <ol class="space-y-5">
         {[
-          { n: '1', title: 'Register your charity', desc: 'Create a free account and set up your organization\'s profile. Add your mission, location, and what types of items you typically need.' },
-          { n: '2', title: 'Post item requests', desc: 'List the items your charity needs: furniture, clothing, kitchen supplies, anything. Add as many requests as you need with quantities and conditions.' },
-          { n: '3', title: 'Donors get matched', desc: 'Donors in your area with matching items get notified. You can also browse available donations and reach out directly.' },
-          { n: '4', title: 'Coordinate pickup in-app', desc: 'Message donors directly to arrange pickup or drop-off. No phone numbers shared, all communication stays in the app.' },
+          { n: '1', title: 'Register your non-profit', desc: 'Create a free account and set up your organization\'s profile. Add your mission, location, and what types of items you typically need.' },
+          { n: '2', title: 'Post item requests', desc: 'List the items your non-profit needs: furniture, clothing, kitchen supplies, anything. Add as many requests as you need with quantities and conditions.' },
+          { n: '3', title: 'Browse and request posted items', desc: 'Scroll through items posted by donors and request the ones your organisation needs, or wait for donors with matching items to reach out directly.' },
+          { n: '4', title: 'Coordinate pickup in-app', desc: 'Message donors directly to arrange pickup or drop-off. No phone numbers shared, all communication stays in the app. Accept or decline incoming donation requests, then set up a pickup arrangement, all in one place.' },
           { n: '5', title: 'Track what you receive', desc: 'Every confirmed donation logs to your history. Know exactly what came in, when, and from whom.' },
         ].map(({ n, title, desc }, i, arr) => (
           <li class="flex gap-5 relative">
@@ -135,7 +147,7 @@ import Footer from '../components/Footer.astro';
   <section class="py-12 bg-white">
     <div class="max-w-6xl mx-auto px-5">
       <div class="bg-gradient-to-br from-brand-900 to-brand-700 rounded-3xl p-10 text-white text-center shadow-2xl">
-        <h2 class="text-3xl font-black tracking-tight mb-3">Register your charity and join the beta today</h2>
+        <h2 class="text-3xl font-black tracking-tight mb-3">Register your non-profit and join the beta today</h2>
         <p class="text-white/70 mb-7 max-w-md mx-auto">
           It's free, takes minutes, and puts you in front of donors in your community.
         </p>
