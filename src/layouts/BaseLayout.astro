@@ -7,8 +7,8 @@ export interface Props {
 }
 
 const {
-  title = 'Suslify | Donate Items. Connect with Charities. Track Your Impact.',
-  description = 'Suslify connects donors with charities. Post items to donate, request what you need, message donors directly, and track every donation from listing to pickup. Free for everyone.',
+  title = 'Suslify | Donate Items. Connect with Non-profits. Track Your Impact.',
+  description = 'Suslify connects donors with non-profits. Post items to donate, request what you need, message donors directly, and track every donation from listing to pickup. Free for everyone.',
   ogImage = 'https://suslify.com/og-image.png',
   canonical = Astro.url.href,
 } = Astro.props;
@@ -28,7 +28,7 @@ const site = 'https://suslify.com';
     <!-- Primary SEO -->
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="keywords" content="donate items, charity app, item donation, donate goods, charitable giving, donate to charity near me, nonprofit donation tracker, free charity app" />
+    <meta name="keywords" content="donate items, non-profit app, item donation, donate goods, charitable giving, donate to non-profit near me, nonprofit donation tracker, free non-profit app" />
     <link rel="canonical" href={canonical} />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Suslify" />
@@ -55,7 +55,7 @@ const site = 'https://suslify.com';
       "name": "Suslify",
       "applicationCategory": "LifestyleApplication",
       "operatingSystem": "iOS, Android",
-      "description": "Suslify connects donors with charities. Post items to donate, request what you need, coordinate pickup through in-app messaging, and track every donation from start to finish.",
+      "description": "Suslify connects donors with non-profits. Post items to donate, request what you need, coordinate pickup through in-app messaging, and track every donation from start to finish.",
       "url": site,
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
       "publisher": {
