@@ -1,0 +1,287 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const categories = ['All', 'Getting started', 'For donors', 'For non-profits', 'Pickup & delivery', 'Trust & safety'];
+
+const faqs = [
+  {
+    category: 'Getting started',
+    q: 'What is Suslify?',
+    a: 'Suslify is a free app that connects people who have goods to give with non-profits and individuals who need them. You can post an item to donate, request something you need, message the other person directly, and track the donation from listing all the way to a confirmed handoff.',
+  },
+  {
+    category: 'Getting started',
+    q: 'How much does it cost?',
+    a: 'Nothing. Suslify is completely free for both donors and non-profits. There\'s no fee to list, request, or receive items, and no credit card required to join.',
+  },
+  {
+    category: 'Getting started',
+    q: 'Who is Suslify for?',
+    a: 'Two groups. Individual donors who have items they no longer need, and non-profits looking for a reliable way to source specific goods. You can sign up as a donor, as a non-profit, or as both from the same account.',
+  },
+  {
+    category: 'Getting started',
+    q: 'How do I download the app?',
+    a: 'We\'re currently in beta. Sign up at the beta sign-up form on our homepage and you\'ll receive an email with instructions on how to download and install the app on your device.',
+  },
+  {
+    category: 'Getting started',
+    q: 'How do I join the beta?',
+    a: 'Head to the beta sign-up on our homepage, enter your name and email, and you\'ll get early access. Since we\'re in beta, some things may still be rough around the edges, and your feedback directly shapes what we build next.',
+  },
+  {
+    category: 'For donors',
+    q: 'How do I donate an item?',
+    a: 'Create a listing with a few photos, the item\'s condition, quantity, and your general location. Once it\'s live, non-profits can browse it and request it, or you can offer it directly toward a request someone has already posted.',
+  },
+  {
+    category: 'For donors',
+    q: 'What kinds of items can I list?',
+    a: 'Most everyday goods: clothing, household items, furniture, baby and kids\' gear, books, toys, hygiene supplies, and more. Items should be clean and in usable condition. Suslify is for goods, not cash donations.',
+  },
+  {
+    category: 'For donors',
+    q: 'Can I choose who receives my donation?',
+    a: 'Yes. When someone requests your item you can review who they are before accepting, and you can decline any request. You stay in control of where your donation goes.',
+  },
+  {
+    category: 'For donors',
+    q: 'How do I know my item was received?',
+    a: 'Every donation is tracked through each stage, and both sides get a confirmation once the handoff is marked complete. The full record is saved to your history automatically.',
+  },
+  {
+    category: 'For non-profits',
+    q: 'How does Suslify help my organization?',
+    a: 'Instead of posting your needs across scattered channels and hoping the right person sees them, you post exactly what you need on Suslify and donors come to you. You can also browse available items, message donors directly, and keep a full record of everything received.',
+  },
+  {
+    category: 'For non-profits',
+    q: 'How do we get our organization on Suslify?',
+    a: 'Have an individual create a free account. Once signed up, they can set up an organization profile directly from within the app. From there you can post requests, manage incoming donations, and use the community feed.',
+  },
+  {
+    category: 'For non-profits',
+    q: 'How do we post what we need?',
+    a: 'From your organization profile, create a request describing the item, quantity, and any deadline. Donors can then browse it and offer matching items, or you can reach out to donors whose listings fit.',
+  },
+  {
+    category: 'For non-profits',
+    q: 'What is the community feed?',
+    a: 'A shared space where non-profits post announcements, events, fundraisers, and volunteer opportunities. It\'s a way to keep your supporters in the loop on more than just goods, all in one scrollable feed.',
+  },
+  {
+    category: 'For non-profits',
+    q: 'Is it really free for non-profits?',
+    a: 'Yes, completely. Non-profits get a profile, a request board, direct messaging, notifications, and full tracking at no cost.',
+  },
+  {
+    category: 'Pickup & delivery',
+    q: 'How does an item get from donor to recipient?',
+    a: 'You choose what works best for each donation: pickup, drop-off, or shipping. The two sides agree on the details together, so there\'s no single method forced on anyone.',
+  },
+  {
+    category: 'Pickup & delivery',
+    q: 'How do we coordinate the handoff?',
+    a: 'Through in-app messaging. Once a request is accepted you can arrange timing and location right in the app, so there\'s no need to swap phone numbers or move to another platform.',
+  },
+  {
+    category: 'Pickup & delivery',
+    q: 'Who pays for shipping?',
+    a: 'Shipping arrangements are worked out between the donor and recipient in their conversation. Suslify gives you the tools to coordinate; the details are yours to agree on.',
+  },
+  {
+    category: 'Trust & safety',
+    q: 'Do I have to share my personal contact details?',
+    a: 'No. All coordination happens through in-app messaging, so you can arrange a donation without handing out your phone number or personal email.',
+  },
+  {
+    category: 'Trust & safety',
+    q: 'How is my data handled?',
+    a: 'We only collect what\'s needed to run the platform and never sell your information. For the full details, see our <a href="/privacy" class="text-brand-600 underline hover:text-brand-700">Privacy Policy</a> and <a href="/terms" class="text-brand-600 underline hover:text-brand-700">Terms of Use</a>.',
+  },
+  {
+    category: 'Trust & safety',
+    q: 'Suslify is in beta. What does that mean for me?',
+    a: 'It means you\'re using an early version. Features may change, and you might run into the occasional bug. If something doesn\'t work as expected, tell us through the <a href="https://forms.gle/zkx2MMfZv3YBTBbZA" target="_blank" rel="noreferrer" class="text-brand-600 underline hover:text-brand-700">feedback form</a>. Your input genuinely shapes the product.',
+  },
+];
+---
+
+<BaseLayout
+  title="FAQ | Suslify"
+  description="Answers to common questions about Suslify: how it works, how to donate, how non-profits can get started, and more."
+>
+  <Header />
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-white pt-12 pb-12 md:pt-16 md:pb-16">
+    <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+      <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full bg-brand-100/50 blur-3xl"></div>
+    </div>
+    <div class="relative max-w-3xl mx-auto px-5 text-center">
+      <p class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-4">Help centre</p>
+      <h1 class="text-5xl sm:text-6xl font-black tracking-tight text-slate-900 mb-6 leading-tight">
+        Frequently asked<br /><span class="text-brand-500">questions.</span>
+      </h1>
+      <p class="text-lg text-slate-500 leading-relaxed mb-9 max-w-lg mx-auto">
+        Everything you need to know about Suslify. Can't find what you're looking for?
+        <a href="mailto:hello@suslify.com" class="text-brand-600 font-semibold hover:text-brand-700 transition-colors">Email us.</a>
+      </p>
+      <!-- Search -->
+      <div class="relative max-w-lg mx-auto">
+        <svg class="absolute left-5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input
+          id="faq-search"
+          type="search"
+          placeholder="Search questions..."
+          class="w-full bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 rounded-full pl-12 pr-5 py-3.5 text-sm focus:outline-none focus:bg-white focus:border-brand-400 focus:ring-4 focus:ring-brand-500/10 transition-all"
+          aria-label="Search FAQ"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Category chips -->
+  <section class="bg-white border-b border-slate-100 sticky top-16 z-40">
+    <div class="max-w-4xl mx-auto px-5 py-3 flex gap-2 overflow-x-auto scrollbar-hide">
+      {categories.map((cat, i) => (
+        <button
+          data-category={cat}
+          class={`faq-chip shrink-0 text-xs font-semibold px-4 py-1.5 rounded-full border transition-all whitespace-nowrap ${i === 0 ? 'bg-brand-500 border-brand-500 text-white' : 'bg-white border-slate-200 text-slate-600 hover:border-brand-400 hover:text-brand-600'}`}
+        >
+          {cat}
+        </button>
+      ))}
+    </div>
+  </section>
+
+  <!-- FAQ list -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-5">
+
+      <!-- No results -->
+      <p id="faq-no-results" class="hidden text-center text-slate-400 py-16 text-sm">No questions match your search.</p>
+
+      <!-- Items -->
+      <div id="faq-list" class="divide-y divide-slate-100">
+        {faqs.map((item, i) => (
+          <div
+            class="faq-item py-1"
+            data-category={item.category}
+            data-q={item.q.toLowerCase()}
+            data-a={item.a.toLowerCase()}
+          >
+            <button
+              class="faq-trigger w-full flex items-center justify-between gap-4 py-5 text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 rounded-lg"
+              aria-expanded="false"
+              aria-controls={`faq-answer-${i}`}
+            >
+              <span class="font-semibold text-slate-900 group-hover:text-brand-600 transition-colors leading-snug">{item.q}</span>
+              <svg class="faq-chevron w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div
+              id={`faq-answer-${i}`}
+              class="faq-answer overflow-hidden max-h-0 transition-all duration-300 ease-in-out"
+            >
+              <p class="pb-5 text-slate-500 leading-relaxed text-sm pr-8" set:html={item.a} />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="pb-20 bg-white">
+    <div class="max-w-3xl mx-auto px-5">
+      <div class="bg-slate-50 border border-slate-200 rounded-3xl p-10 text-center">
+        <div class="w-12 h-12 bg-brand-50 border border-brand-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
+          <svg class="w-5 h-5 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h2 class="text-2xl font-black tracking-tight text-slate-900 mb-3">Still have questions?</h2>
+        <p class="text-slate-500 mb-7 max-w-sm mx-auto leading-relaxed">We're happy to help. Reach out and we'll get back to you.</p>
+        <a href="mailto:hello@suslify.com" class="inline-flex bg-brand-500 hover:bg-brand-600 text-white font-bold px-7 py-3.5 rounded-full text-base transition-all shadow-lg shadow-brand-500/25 hover:-translate-y-0.5">
+          hello@suslify.com
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>
+
+<script>
+  const searchInput  = document.getElementById('faq-search') as HTMLInputElement;
+  const chips        = document.querySelectorAll<HTMLButtonElement>('.faq-chip');
+  const items        = document.querySelectorAll<HTMLElement>('.faq-item');
+  const noResults    = document.getElementById('faq-no-results')!;
+
+  let activeCategory = 'All';
+  let searchQuery    = '';
+
+  function applyFilters() {
+    let visible = 0;
+    items.forEach(item => {
+      const cat    = item.dataset.category ?? '';
+      const q      = item.dataset.q ?? '';
+      const a      = item.dataset.a ?? '';
+      const matchCat    = activeCategory === 'All' || cat === activeCategory;
+      const matchSearch = !searchQuery || q.includes(searchQuery) || a.includes(searchQuery);
+      const show = matchCat && matchSearch;
+      item.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    noResults.classList.toggle('hidden', visible > 0);
+  }
+
+  // Category chips
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      activeCategory = chip.dataset.category ?? 'All';
+      chips.forEach(c => {
+        const active = c.dataset.category === activeCategory;
+        c.classList.toggle('bg-brand-500',    active);
+        c.classList.toggle('border-brand-500', active);
+        c.classList.toggle('text-white',       active);
+        c.classList.toggle('bg-white',         !active);
+        c.classList.toggle('border-slate-200', !active);
+        c.classList.toggle('text-slate-600',   !active);
+      });
+      applyFilters();
+    });
+  });
+
+  // Search
+  searchInput?.addEventListener('input', () => {
+    searchQuery = searchInput.value.toLowerCase().trim();
+    applyFilters();
+  });
+
+  // Accordion
+  document.querySelectorAll<HTMLButtonElement>('.faq-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const expanded = trigger.getAttribute('aria-expanded') === 'true';
+      const answerId = trigger.getAttribute('aria-controls')!;
+      const answer   = document.getElementById(answerId)!;
+      const chevron  = trigger.querySelector<SVGElement>('.faq-chevron')!;
+
+      if (expanded) {
+        trigger.setAttribute('aria-expanded', 'false');
+        answer.style.maxHeight = '0';
+        chevron.style.transform = '';
+      } else {
+        trigger.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        chevron.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+</script>
