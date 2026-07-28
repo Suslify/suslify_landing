@@ -1,4 +1,6 @@
 ---
+import Logo from './Logo.astro';
+
 const year = new Date().getFullYear();
 ---
 
@@ -10,13 +12,7 @@ const year = new Date().getFullYear();
       <!-- Brand -->
       <div class="text-left">
         <a href="/" class="flex items-center gap-2.5 mb-4">
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 shrink-0">
-            <rect width="200" height="200" rx="48" fill="#3DBE8B"/>
-            <path d="M40 172 A44 44 0 0 1 84 128"   stroke="white" stroke-width="12" fill="none" stroke-linecap="round"/>
-            <path d="M40 172 A80 80 0 0 1 120 92"   stroke="white" stroke-width="12" fill="none" stroke-linecap="round" opacity="0.6"/>
-            <path d="M40 172 A116 116 0 0 1 156 56" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" opacity="0.28"/>
-            <circle cx="40" cy="172" r="14" fill="white"/>
-          </svg>
+          <Logo class="w-8 h-8" />
           <span class="font-medium text-base text-white">Suslify</span>
         </a>
         <p class="text-sm leading-relaxed text-white/60 max-w-xs">
