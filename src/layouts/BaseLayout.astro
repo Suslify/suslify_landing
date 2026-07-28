@@ -22,8 +22,12 @@ const site = 'https://suslify.com';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="alternate icon" type="image/png" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <!-- multi-size .ico incl. 48x48, which is what Google Search reads -->
+    <link rel="alternate icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- iOS ignores SVG here, so this must stay a PNG -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#00BF8A" />
 
     <!-- Primary SEO -->
     <title>{title}</title>
@@ -62,6 +66,16 @@ const site = 'https://suslify.com';
         "@type": "Organization",
         "name": "Suslify",
         "url": site,
+        "logo": {
+          "@type": "ImageObject",
+          "url": `${site}/apple-touch-icon.png`,
+          "width": 180,
+          "height": 180
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/suslify/",
+          "https://www.instagram.com/suslify/"
+        ],
         "contactPoint": { "@type": "ContactPoint", "email": "hello@suslify.com", "contactType": "customer support" }
       },
       "featureList": [
